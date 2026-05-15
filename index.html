@@ -2,70 +2,78 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Fox Marvel: Multiversal Sequence</title>
+    <title>Fox Marvel Master Timeline</title>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
-        body { font-family: 'Inter', sans-serif; background: #050505; color: #fff; margin: 0; overflow: hidden; }
-        .tt-link { fill: none; stroke: #00d4ff; stroke-width: 1.5px; stroke-dasharray: 4,4; opacity: 0.5; }
-        .node image { border-radius: 4px; transition: 0.2s ease; cursor: pointer; border: 1px solid #333; }
-        .node:hover image { transform: scale(1.6) translateY(-10px); z-index: 100; border-color: #f2d024; }
-        .label { font-size: 10px; fill: #888; pointer-events: none; }
-        .lane-label { font-size: 14px; font-weight: 900; fill: #f2d024; text-transform: uppercase; letter-spacing: 2px; opacity: 0.6; }
-        .guide-line { stroke: #1a1a1a; stroke-width: 1px; }
-        h1 { position: fixed; top: 10px; left: 20px; color: #f2d024; font-size: 18px; z-index: 10; margin: 0; text-transform: uppercase; }
-        #controls { position: fixed; bottom: 10px; left: 20px; font-size: 11px; color: #666; z-index: 10; }
+        body { font-family: 'Segoe UI', sans-serif; background: #050505; color: #fff; margin: 0; overflow: hidden; }
+        .tt-link { fill: none; stroke: #00d4ff; stroke-width: 1.5px; opacity: 0.4; pointer-events: none; }
+        .node image { border-radius: 4px; transition: 0.2s; border: 1px solid #333; }
+        .node:hover image { transform: scale(1.6); border-color: #f2d024; z-index: 100; }
+        .label { font-size: 10px; fill: #777; pointer-events: none; }
+        
+        /* Sticky Y-Axis Styling */
+        #axis-overlay { position: fixed; left: 0; top: 0; width: 140px; height: 100%; background: linear-gradient(to right, rgba(5,5,5,1) 70%, rgba(5,5,5,0)); z-index: 20; pointer-events: none; }
+        .lane-label { font-size: 13px; font-weight: 900; fill: #f2d024; text-transform: uppercase; letter-spacing: 1.5px; }
+        
+        h1 { position: fixed; top: 10px; left: 20px; color: #f2d024; font-size: 16px; z-index: 30; background: #050505; padding: 5px; }
     </style>
 </head>
 <body>
-    <h1>Fox Marvel Universe: Chronological Sequence</h1>
-    <div id="controls">Use ← → Arrows to Scroll • Mouse Wheel to Zoom • Drag to Pan</div>
+    <h1>Fox Marvel Chronology</h1>
+    <div id="axis-overlay"></div>
     <div id="viz"></div>
 
     <script>
         const width = window.innerWidth;
         const height = window.innerHeight;
-        const svg = d3.select("#viz").append("svg")
-            .attr("width", width).attr("height", height);
+        const svg = d3.select("#viz").append("svg").attr("width", width).attr("height", height);
+        const g = svg.append("g");
+        const axisSvg = d3.select("#axis-overlay").append("svg").attr("width", 140).attr("height", height);
+
+        const lanes = {
+            "Earth-TRN620": height * 0.12,
+            "Earth-121698": height * 0.26,
+            "Earth-158664": height * 0.40,
+            "Earth-10005":  height * 0.54,
+            "Earth-TRN414": height * 0.68,
+            "Earth-41633":  height * 0.82,
+            "Earth-TRN634": height * 0.90,
+            "Earth-17315":  height * 0.96
+        };
+
+        // Draw Sticky Labels
+        Object.entries(lanes).forEach(([name, y]) => {
+            axisSvg.append("text").attr("class", "lane-label").attr("x", 15).attr("y", y).text(name);
+        });
 
         const zoom = d3.zoom()
-            .scaleExtent([0.1, 2])
+            .scaleExtent([0.2, 1.5])
+            .translateExtent([[0, 0], [15000, height]]) // Prevents scrolling past the start
             .on("zoom", (e) => g.attr("transform", e.transform));
 
         svg.call(zoom);
-        const g = svg.append("g");
 
-        // Keyboard Navigation
+        // Keyboard Scroll
         d3.select(window).on("keydown", (e) => {
-            const step = 200;
             const t = d3.zoomTransform(svg.node());
-            if (e.key === "ArrowRight") svg.transition().duration(100).call(zoom.transform, t.translate(-step, 0));
-            if (e.key === "ArrowLeft") svg.transition().duration(100).call(zoom.transform, t.translate(step, 0));
+            if (e.key === "ArrowRight") svg.transition().duration(150).call(zoom.transform, t.translate(-300, 0));
+            if (e.key === "ArrowLeft") svg.transition().duration(150).call(zoom.transform, t.translate(300, 0));
         });
 
         d3.tsv("data.tsv").then(data => {
+            // Sort to prevent Logan from "floating" away
             data.sort((a, b) => parseFloat(a.year) - parseFloat(b.year));
 
             const x = d3.scaleLinear()
                 .domain([0, data.length - 1])
-                .range([150, data.length * 140]); 
+                .range([180, data.length * 150]); 
 
-            const lanes = {
-                "Earth-TRN620": height * 0.12,
-                "Earth-121698": height * 0.28,
-                "Earth-158664": height * 0.44,
-                "Earth-10005":  height * 0.60,
-                "Earth-TRN414": height * 0.76,
-                "Earth-41633":  height * 0.88,
-                "Earth-TRN634": height * 0.94
-            };
-
-            // Draw Lane Labels & Guides
-            Object.entries(lanes).forEach(([name, y]) => {
-                g.append("line").attr("class", "guide-line").attr("x1", 0).attr("x2", data.length * 150).attr("y1", y).attr("y2", y);
-                g.append("text").attr("class", "lane-label").attr("x", 20).attr("y", y - 10).text(name);
+            // Horizontal Guide Lines
+            Object.values(lanes).forEach(y => {
+                g.append("line").attr("x1", 0).attr("x2", 15000).attr("y1", y).attr("y2", y).attr("stroke", "#1a1a1a");
             });
 
-            // Links (Calculated by Index)
+            // Arcs
             const links = [];
             data.forEach((d, i) => {
                 d.idx = i;
@@ -82,22 +90,20 @@
                 .attr("d", d => {
                     const x1 = x(d.s.idx), y1 = lanes[d.s.lane];
                     const x2 = x(d.t.idx), y2 = lanes[d.t.lane];
-                    const jitter = (d.s.idx % 2 === 0 ? 30 : -30);
-                    return `M${x1},${y1} C${(x1+x2)/2},${y1 + jitter} ${(x1+x2)/2},${y2 + jitter} ${x2},${y2}`;
+                    return `M${x1},${y1} C${(x1+x2)/2},${y1} ${(x1+x2)/2},${y2} ${x2},${y2}`;
                 });
 
-            // Nodes
+            // Node Groups
             const nodes = g.selectAll(".node").data(data).enter().append("g")
                 .attr("class", "node")
                 .attr("transform", (d, i) => `translate(${x(i)}, ${lanes[d.lane]})`);
 
             nodes.append("image")
                 .attr("xlink:href", d => d.image)
-                .attr("x", -35).attr("y", -50).attr("width", 70).attr("height", 100)
-                .on("error", function() { d3.select(this).attr("xlink:href", "https://via.placeholder.com/70x100?text=Poster"); });
+                .attr("x", -35).attr("y", -50).attr("width", 70).attr("height", 100);
 
             nodes.append("text").attr("class", "label").attr("text-anchor", "middle").attr("y", 65)
-                .text(d => d.title.length > 18 ? d.title.substring(0,15)+"..." : d.title);
+                .text(d => d.title.length > 20 ? d.title.substring(0,17)+"..." : d.title);
         });
     </script>
 </body>
