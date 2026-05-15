@@ -42,23 +42,40 @@
             axisSvg.append("text").attr("class", "lane-label").attr("x", 15).attr("y", y + 4).text(name);
         });
 
-        const zoom = d3.zoom().on("zoom", (e) => g.attr("transform", e.transform));
+        const zoom = d3.zoom()
+            .scaleExtent([0.1, 2])
+            .on("zoom", (e) => g.attr("transform", e.transform));
+        
         svg.call(zoom);
+
+        // FIXED Keyboard Scrolling Logic
+        d3.select(window).on("keydown", (e) => {
+            const currentTransform = d3.zoomTransform(svg.node());
+            let { x, y, k } = currentTransform;
+            const step = 300; 
+
+            if (e.key === "ArrowRight") x -= step;
+            if (e.key === "ArrowLeft") x += step;
+            
+            svg.transition().duration(200).call(zoom.transform, d3.zoomIdentity.translate(x, y).scale(k));
+        });
 
         d3.tsv("data.tsv").then(data => {
             data.sort((a, b) => parseFloat(a.year) - parseFloat(b.year));
-            const x = d3.scaleLinear().domain([0, data.length]).range([200, data.length * 180]);
+            const xScale = d3.scaleLinear().domain([0, data.length]).range([200, data.length * 180]);
 
-            // Helper to get Y safely
             const getY = (d) => lanes[d.lane.trim()] || height / 2;
 
-            const links = [];
             data.forEach((d, i) => {
-                d.xPos = x(i);
+                d.xPos = xScale(i);
                 d.yPos = getY(d);
+            });
+
+            const links = [];
+            data.forEach((d) => {
                 if (d.connections) {
                     d.connections.split(",").forEach(tId => {
-                        const target = data.find(m => m.id.trim() == tId.trim());
+                        const target = data.find(m => m.id.trim() === tId.trim());
                         if(target) links.push({ s: d, t: target });
                     });
                 }
@@ -66,7 +83,12 @@
 
             g.selectAll(".tt-link").data(links).enter().append("path")
                 .attr("class", "tt-link")
-                .attr("d", d => `M${d.s.xPos},${d.s.yPos} C${(d.s.xPos+d.t.xPos)/2},${d.s.yPos} ${(d.s.xPos+d.t.xPos)/2},${d.t.yPos} ${d.t.xPos},${d.t.yPos}`);
+                .attr("d", d => {
+                    const midX = (d.s.xPos + d.t.xPos) / 2;
+                    // For the Legion loop (far right to far left), we use a deeper curve
+                    const curveType = Math.abs(d.s.xPos - d.t.xPos) > 2000 ? 1.5 : 1;
+                    return `M${d.s.xPos},${d.s.yPos} C${midX},${d.s.yPos} ${midX},${d.t.yPos} ${d.t.xPos},${d.t.yPos}`;
+                });
 
             const nodes = g.selectAll(".node").data(data).enter().append("g")
                 .attr("class", "node")
