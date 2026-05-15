@@ -1,42 +1,28 @@
-// 1. Define fixed Y-coordinates for every lane
-const laneSpacing = 120;
-const laneStart = 100;
-
-const lanes = {
-    "Earth-TRN620": laneStart + (laneSpacing * 0), 
-    "Earth-121698": laneStart + (laneSpacing * 1),
-    "Earth-158664": laneStart + (laneSpacing * 2),
-    "Earth-10005":  laneStart + (laneSpacing * 3),
-    "Earth-TRN414": laneStart + (laneSpacing * 4),
-    "Earth-41633":  laneStart + (laneSpacing * 5),
-    "Earth-TRN634": laneStart + (laneSpacing * 6),
-    "Earth-17315":  laneStart + (laneSpacing * 7)
-};
-
-// 2. Draw Lane Labels (Aligned to the exact Y value)
-Object.entries(lanes).forEach(([name, y]) => {
-    axisSvg.append("text")
-        .attr("class", "lane-label")
-        .attr("x", 15)
-        .attr("y", y + 5) // +5 to vertically center text baseline
-        .text(name);
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fox Marvel: Multiversal Chronology</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; background: #050505; color: #fff; margin: 0; overflow: hidden; }
+        .tt-link { fill: none; stroke: #00d4ff; stroke-width: 1.5px; opacity: 0.2; pointer-events: none; transition: opacity 0.3s; }
+        .tt-link.special-link { stroke: #f2d024; stroke-width: 2.5px; opacity: 0.6; stroke-dasharray: 5,5; }
+        .node image { border-radius: 4px; border: 1px solid #333; transition: 0.2s; cursor: pointer; }
+        .node:hover image { transform: scale(1.6); border-color: #f2d024; z-index: 100; }
+        .label { font-size: 10px; fill: #aaa; pointer-events: none; text-shadow: 1px 1px #000; font-weight: bold; }
         
-    // Optional: Add a faint guide line across the screen
-    g.append("line")
-        .attr("x1", 0)
-        .attr("x2", 50000)
-        .attr("y1", y)
-        .attr("y2", y)
-        .attr("stroke", "#222")
-        .attr("stroke-dasharray", "4");
-});
+        #axis-overlay { position: fixed; left: 0; top: 0; width: 140px; height: 100%; background: linear-gradient(to right, #050505 90%, transparent); z-index: 20; pointer-events: none; border-right: 1px solid #222; }
+        .lane-label { font-size: 11px; font-weight: 900; fill: #f2d024; text-transform: uppercase; letter-spacing: 1px; }
+        h1 { position: fixed; top: 10px; left: 20px; color: #f2d024; font-size: 14px; z-index: 30; letter-spacing: 2px; margin: 0; padding: 10px 0; }
+    </style>
+</head>
+<body>
+    <h1>FOX MARVEL MULTIVERSE CHRONOLOGY</h1>
+    <div id="axis-overlay"></div>
+    <div id="viz"></div>
 
-// 3. Inside d3.tsv logic, ensure getY matches EXACTLY
-const getY = (d) => {
-    const laneKey = d.lane.trim();
-    if (lanes.hasOwnProperty(laneKey)) {
-        return lanes[laneKey];
-    }
-    console.warn("Missing lane definition for:", laneKey);
-    return 0; // Or a default safe value
-};
+    <script src="script.js"></script>
+</body>
+</html>
