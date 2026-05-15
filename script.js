@@ -2,11 +2,11 @@ const width = window.innerWidth, height = window.innerHeight;
 const svg = d3.select("#viz").append("svg").attr("width", width).attr("height", height);
 const g = svg.append("g");
 
-// Create the label SVG and a group inside it for the labels
+// Create the label SVG and a group inside it for synchronized scrolling
 const axisSvg = d3.select("#axis-overlay").append("svg").attr("width", 140).attr("height", height);
 const labelGroup = axisSvg.append("g"); 
 
-// 1. FIXED VERTICAL LANES
+// 1. VERTICAL LANE SETUP (Snapped to Realities)
 const laneSpacing = 110;
 const laneStart = 100;
 const lanes = {
@@ -20,27 +20,24 @@ const lanes = {
     "Earth-17315":  laneStart + (laneSpacing * 7)
 };
 
-// Draw Lane Labels inside the syncable group
+// Draw Lane Labels and Background Guide Lines
 Object.entries(lanes).forEach(([name, y]) => {
     labelGroup.append("text").attr("class", "lane-label").attr("x", 15).attr("y", y + 5).text(name);
     g.append("line").attr("x1", 0).attr("x2", 50000).attr("y1", y).attr("y2", y)
      .attr("stroke", "#1a1a1a").attr("stroke-width", 1);
 });
 
-// 2. SYNCED ZOOM LOGIC
+// 2. ZOOM & KEYBOARD SYNC
 const zoom = d3.zoom()
     .scaleExtent([0.1, 2])
     .on("zoom", (e) => {
-        // Update the main graph (full transform)
         g.attr("transform", e.transform);
-        
-        // Update the labels (Vertical and Scale ONLY, no X translation)
+        // Sync Y-axis and Scale for labels, but lock X
         labelGroup.attr("transform", `translate(0, ${e.transform.y}) scale(${e.transform.k})`);
     });
 
 svg.call(zoom);
 
-// Keyboard Navigation
 d3.select(window).on("keydown", (e) => {
     const transform = d3.zoomTransform(svg.node());
     let { x, y, k } = transform;
@@ -55,16 +52,17 @@ d3.select(window).on("keydown", (e) => {
        .call(zoom.transform, d3.zoomIdentity.translate(x, y).scale(k));
 });
 
-// 3. DATA & SEQUENTIAL SPACING
+// 3. DATA PROCESSING & SEQUENTIAL SPACING
 d3.tsv("data.tsv").then(data => {
     data.forEach(d => {
         d.yearNum = parseFloat(d.year);
         d.lane = d.lane.trim();
     });
 
+    // Sort chronologically to determine rank
     data.sort((a, b) => a.yearNum - b.yearNum);
 
-    const itemGap = 200;
+    const itemGap = 210; // Fixed horizontal spacing between posters
     const xScale = d3.scaleLinear()
         .domain([0, data.length - 1])
         .range([250, (data.length - 1) * itemGap + 250]);
@@ -74,7 +72,7 @@ d3.tsv("data.tsv").then(data => {
         d.yPos = lanes[d.lane] || height / 2;
     });
 
-    // 4. DRAW LINKS
+    // 4. DRAW DIRECTIONAL LINKS (Out-Right, In-Left)
     const links = [];
     data.forEach((d) => {
         if (d.connections) {
@@ -86,18 +84,49 @@ d3.tsv("data.tsv").then(data => {
     });
 
     g.selectAll(".tt-link").data(links).enter().append("path")
-        .attr("class", d => ((d.s.id == "47" && d.t.id == "45") || (d.s.id == "74" && d.t.id == "48")) ? "tt-link special-link" : "tt-link")
+        .attr("class", d => {
+            const isSpecial = (d.s.id == "47" && d.t.id == "45") || (d.s.id == "74" && d.t.id == "48");
+            return isSpecial ? "tt-link special-link" : "tt-link";
+        })
+        .attr("marker-end", d => {
+            const isSpecial = (d.s.id == "47" && d.t.id == "45") || (d.s.id == "74" && d.t.id == "48");
+            return isSpecial ? "url(#arrowhead-special)" : "url(#arrowhead)";
+        })
         .attr("d", d => {
-            const midX = (d.s.xPos + d.t.xPos) / 2;
-            return `M${d.s.xPos},${d.s.yPos} C${midX},${d.s.yPos} ${midX},${d.t.yPos} ${d.t.xPos},${d.t.yPos}`;
+            const startX = d.s.xPos + 35; // Exit right side
+            const startY = d.s.yPos;
+            const endX = d.t.xPos - 35;   // Enter left side
+            const endY = d.t.yPos;
+            
+            const dx = endX - startX;
+            const dy = endY - startY;
+
+            // BACKWARD LINKS (The Legion Timeloop logic)
+            if (dx < 0) {
+                const pull = Math.abs(dx) * 0.4;
+                // Arches way above the timeline to return to the start
+                return `M${startX},${startY} C${startX + 200},${startY - 300} ${endX - 200},${endY - 300} ${endX},${endY}`;
+            }
+
+            // FORWARD LINKS (Bezier Curve)
+            const curvature = 0.5;
+            const cp1x = startX + (dx * curvature);
+            const cp2x = endX - (dx * curvature);
+            return `M${startX},${startY} C${cp1x},${startY} ${cp2x},${endY} ${endX},${endY}`;
         });
 
-    // 5. DRAW NODES
+    // 5. DRAW POSTERS (Nodes)
     const nodes = g.selectAll(".node").data(data).enter().append("g")
         .attr("class", "node").attr("transform", d => `translate(${d.xPos}, ${d.yPos})`);
 
-    nodes.append("image").attr("xlink:href", d => d.image)
-        .attr("x", -35).attr("y", -50).attr("width", 70).attr("height", 100);
+    nodes.append("image")
+        .attr("xlink:href", d => d.image)
+        .attr("x", -35).attr("y", -50)
+        .attr("width", 70).attr("height", 100);
 
-    nodes.append("text").attr("class", "label").attr("text-anchor", "middle").attr("y", 68).text(d => d.title);
+    nodes.append("text")
+        .attr("class", "label")
+        .attr("text-anchor", "middle")
+        .attr("y", 70)
+        .text(d => d.title);
 });
