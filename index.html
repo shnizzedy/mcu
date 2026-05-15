@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>The Fox Marvel Multiverse Timeline</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <style>
+        body { font-family: 'Helvetica Neue', sans-serif; background: #000; color: #fff; margin: 0; overflow: hidden; }
+        .link { fill: none; stroke: #444; stroke-width: 1px; opacity: 0.5; }
+        .tt-link { fill: none; stroke: #00d4ff; stroke-width: 2px; stroke-dasharray: 5,3; opacity: 0.8; }
+        .node image { border-radius: 5px; transition: 0.3s; }
+        .node:hover image { transform: scale(1.5); z-index: 100; cursor: pointer; }
+        .label { font-size: 10px; fill: #aaa; pointer-events: none; }
+        .lane-label { font-size: 18px; font-weight: bold; fill: #333; text-transform: uppercase; }
+        h1 { position: fixed; width: 100%; text-align: center; color: #f2d024; top: 10px; z-index: 10; }
+    </style>
+</head>
+<body>
+    <h1>Fox Marvel Universe: Complete Chronology</h1>
+    <div id="viz"></div>
+
+    <script>
+        const width = window.innerWidth;
+        const height = window.innerHeight;
+
+        const svg = d3.select("#viz").append("svg")
+            .attr("width", width).attr("height", height)
+            .call(d3.zoom().scaleExtent([0.1, 3]).on("zoom", (e) => g.attr("transform", e.transform)));
+
+        const g = svg.append("g");
+
+        // Vertical Lane Logic
+        const lanes = {
+            "legion": height * 0.15,
+            "ff": height * 0.35,
+            "main": height * 0.55,
+            "gifted": height * 0.80
+        };
+
+        // Draw Lane Background Labels
+        Object.entries(lanes).forEach(([name, y]) => {
+            g.append("text").attr("class", "lane-label").attr("x", 50).attr("y", y).text(name);
+        });
+
+        d3.tsv("data.tsv").then(data => {
+            const x = d3.scaleLinear()
+                .domain([1999, 2021])
+                .range([100, 10000]); // 10,000px wide to fit all episodes
+
+            // Arrows
+            g.append("defs").append("marker")
+                .attr("id", "head").attr("viewBox", "0 0 10 10").attr("refX", 25).attr("refY", 5)
+                .attr("markerWidth", 6).attr("markerHeight", 6).attr("orient", "auto")
+                .append("path").attr("d", "M 0 0 L 10 5 L 0 10 z").attr("fill", "#00d4ff");
+
+            // Links (Time Travel & Contextual)
+            const links = [];
+            data.forEach(d => {
+                if (d.connections) {
+                    d.connections.split(",").forEach(tId => {
+                        const target = data.find(m => m.id == tId);
+                        if(target) links.push({ s: d, t: target });
+                    });
+                }
+            });
+
+            g.selectAll(".tt-link")
+                .data(links).enter().append("path")
+                .attr("class", "tt-link")
+                .attr("marker-end", "url(#head)")
+                .attr("d", d => {
+                    const x1 = x(+d.s.year), y1 = lanes[d.s.lane];
+                    const x2 = x(+d.t.year), y2 = lanes[d.t.lane];
+                    return `M${x1},${y1} C${x1-100},${y1} ${x2+100},${y2} ${x2},${y2}`;
+                });
+
+            // Nodes
+            const nodes = g.selectAll(".node")
+                .data(data).enter().append("g")
+                .attr("class", "node")
+                .attr("transform", d => `translate(${x(+d.year)}, ${lanes[d.lane]})`);
+
+            nodes.append("image")
+                .attr("xlink:href", d => d.image)
+                .attr("x", -30).attr("y", -45).attr("width", 60).attr("height", 90);
+
+            nodes.append("text")
+                .attr("class", "label").attr("text-anchor", "middle").attr("y", 60)
+                .text(d => d.title);
+        });
+    </script>
+</body>
+</html>
