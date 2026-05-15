@@ -3,7 +3,7 @@ const svg = d3.select("#viz").append("svg").attr("width", width).attr("height", 
 const g = svg.append("g");
 const axisSvg = d3.select("#axis-overlay").append("svg").attr("width", 140).attr("height", height);
 
-// 1. FIXED VERTICAL ALIGNMENT: Definitive Y-coordinates
+// 1. FIXED VERTICAL ALIGNMENT (Snaps to Lanes)
 const laneSpacing = 110;
 const laneStart = 100;
 
@@ -18,23 +18,15 @@ const lanes = {
     "Earth-17315":  laneStart + (laneSpacing * 7)
 };
 
-// Draw static lane labels on the overlay
+// Draw static lane labels
 Object.entries(lanes).forEach(([name, y]) => {
-    axisSvg.append("text")
-        .attr("class", "lane-label")
-        .attr("x", 15)
-        .attr("y", y + 5)
-        .text(name);
+    axisSvg.append("text").attr("class", "lane-label").attr("x", 15).attr("y", y + 5).text(name);
     
-    // Draw horizontal guide lines in the background
-    g.append("line")
-        .attr("x1", 0).attr("x2", 25000)
-        .attr("y1", y).attr("y2", y)
-        .attr("stroke", "#1a1a1a")
-        .attr("stroke-width", 1);
+    g.append("line").attr("x1", 0).attr("x2", 50000).attr("y1", y).attr("y2", y)
+     .attr("stroke", "#1a1a1a").attr("stroke-width", 1);
 });
 
-// 2. ZOOM & KEYBOARD NAVIGATION
+// 2. ZOOM & KEYBOARD (Fixed logic)
 const zoom = d3.zoom()
     .scaleExtent([0.1, 2])
     .on("zoom", (e) => g.attr("transform", e.transform));
@@ -42,40 +34,39 @@ const zoom = d3.zoom()
 svg.call(zoom);
 
 d3.select(window).on("keydown", (e) => {
-    const currentTransform = d3.zoomTransform(svg.node());
-    let { x, y, k } = currentTransform;
-    const step = 600; // Increased step for easier travel
+    const transform = d3.zoomTransform(svg.node());
+    let { x, y, k } = transform;
+    const step = 350; // Step size for sequential scrolling
 
     if (e.key === "ArrowRight") x -= step;
     if (e.key === "ArrowLeft") x += step;
     if (e.key === "ArrowDown") y -= step/2;
     if (e.key === "ArrowUp") y += step/2;
     
-    svg.transition().duration(250).ease(d3.easeCubicOut)
+    svg.transition().duration(200).ease(d3.easeLinear)
        .call(zoom.transform, d3.zoomIdentity.translate(x, y).scale(k));
 });
 
-// 3. DATA PROCESSING
+// 3. DATA PROCESSING (Sequential Spacing)
 d3.tsv("data.tsv").then(data => {
-    // Parse years and trim lanes to prevent alignment errors
+    // Convert year to float for correct sorting
     data.forEach(d => {
         d.yearNum = parseFloat(d.year);
         d.lane = d.lane.trim();
     });
 
-    // Sort by time
+    // Ensure chronological sequence
     data.sort((a, b) => a.yearNum - b.yearNum);
 
-    // X Scale: Maps 1962-2029 to a wide horizontal range
-    const minYear = d3.min(data, d => d.yearNum);
-    const maxYear = d3.max(data, d => d.yearNum);
+    // X Scale: 200px gap per movie, regardless of time gaps
+    const itemGap = 200;
     const xScale = d3.scaleLinear()
-        .domain([minYear, maxYear])
-        .range([300, (maxYear - minYear) * 180 + 500]);
+        .domain([0, data.length - 1])
+        .range([250, (data.length - 1) * itemGap + 250]);
 
-    // Apply positions to data objects
-    data.forEach(d => {
-        d.xPos = xScale(d.yearNum);
+    // Apply positions based on ARRAY INDEX
+    data.forEach((d, i) => {
+        d.xPos = xScale(i);
         d.yPos = lanes[d.lane] || height / 2;
     });
 
@@ -94,17 +85,16 @@ d3.tsv("data.tsv").then(data => {
         .data(links)
         .enter().append("path")
         .attr("class", d => {
-            // Highlight Logan->D&W and Legion Loop
+            // Logic for the requested "Logan Anchor" and "Legion Loop"
             const isSpecial = (d.s.id == "47" && d.t.id == "45") || (d.s.id == "74" && d.t.id == "48");
             return isSpecial ? "tt-link special-link" : "tt-link";
         })
         .attr("d", d => {
             const midX = (d.s.xPos + d.t.xPos) / 2;
-            // Bezier curve: M (start) C (control point 1, control point 2, end)
             return `M${d.s.xPos},${d.s.yPos} C${midX},${d.s.yPos} ${midX},${d.t.yPos} ${d.t.xPos},${d.t.yPos}`;
         });
 
-    // 5. DRAW NODES (Posters)
+    // 5. DRAW NODES
     const nodes = g.selectAll(".node")
         .data(data)
         .enter().append("g")
@@ -120,5 +110,5 @@ d3.tsv("data.tsv").then(data => {
         .attr("class", "label")
         .attr("text-anchor", "middle")
         .attr("y", 68)
-        .text(d => `${Math.floor(d.yearNum)}: ${d.title}`);
+        .text(d => d.title);
 });
