@@ -2,65 +2,56 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Fox Marvel: The Complete Multiverse</title>
+    <title>Fox Marvel Sequence Timeline</title>
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
-        body { font-family: 'Segoe UI', sans-serif; background: #050505; color: white; margin: 0; overflow: hidden; }
-        .link { fill: none; stroke: #444; stroke-width: 1px; opacity: 0.3; }
-        .tt-link { fill: none; stroke: #ff0055; stroke-width: 2px; stroke-dasharray: 5,3; opacity: 0.7; }
-        .node image { cursor: pointer; transition: 0.3s; border: 1px solid #333; }
-        .node:hover image { transform: scale(1.4); border-color: #f2d024; z-index: 50; }
-        .label { font-size: 10px; fill: #eee; pointer-events: none; text-shadow: 2px 2px 2px #000; }
-        .lane-label { font-size: 14px; font-weight: bold; fill: #f2d024; letter-spacing: 1px; }
-        h1 { position: fixed; width: 100%; text-align: center; color: #f2d024; top: 10px; pointer-events: none; text-transform: uppercase; font-size: 20px; }
+        body { font-family: 'Inter', sans-serif; background: #080808; color: #fff; margin: 0; overflow: hidden; }
+        .tt-link { fill: none; stroke: #00d4ff; stroke-width: 1.5px; stroke-dasharray: 4,4; opacity: 0.6; }
+        .node image { border-radius: 4px; transition: 0.2s ease; cursor: pointer; }
+        .node:hover image { transform: scale(1.6) translateY(-10px); z-index: 100; filter: brightness(1.2); }
+        .label { font-size: 10px; fill: #999; pointer-events: none; }
+        .lane-label { font-size: 12px; font-weight: 800; fill: #444; text-transform: uppercase; letter-spacing: 2px; }
+        h1 { position: fixed; top: 10px; left: 20px; color: #f2d024; font-size: 18px; z-index: 10; opacity: 0.8; }
     </style>
 </head>
 <body>
-    <h1>Fox Marvel Multiverse Timeline</h1>
+    <h1>Fox Marvel Universe: Sequence View</h1>
     <div id="viz"></div>
 
     <script>
         const width = window.innerWidth;
         const height = window.innerHeight;
-
         const svg = d3.select("#viz").append("svg")
             .attr("width", width).attr("height", height)
-            .call(d3.zoom().scaleExtent([0.1, 2]).on("zoom", (e) => g.attr("transform", e.transform)));
+            .call(d3.zoom().on("zoom", (e) => g.attr("transform", e.transform)));
 
         const g = svg.append("g");
 
-        // Fandom-sourced Earth Lanes
-        const lanes = {
-            "Earth-TRN620": height * 0.10, // Legion
-            "Earth-121698": height * 0.22, // Original Fantastic Four
-            "Earth-158664": height * 0.34, // Fan4stic
-            "Earth-10005":  height * 0.46, // Original X-Men (incl. Deadpool & Wolverine)
-            "Earth-TRN414": height * 0.58, // Revised X-Men
-            "Earth-41633":  height * 0.70, // Deadpool 1 & 2
-            "Earth-TRN634": height * 0.82, // The Gifted
-            "Earth-17315":  height * 0.94  // Logan
-        };
-
-        // Draw Lane Labels and Guideline
-        Object.entries(lanes).forEach(([earth, y]) => {
-            g.append("text").attr("class", "lane-label").attr("x", 20).attr("y", y - 55).text(earth);
-            g.append("line").attr("x1", 0).attr("x2", 15000).attr("y1", y).attr("y2", y).attr("stroke", "#111");
-        });
-
         d3.tsv("data.tsv").then(data => {
+            // Sort by absolute release sequence
+            data.sort((a, b) => parseFloat(a.year) - parseFloat(b.year));
+
+            // Horizontal Scale: Dynamic Sequence (not absolute time)
             const x = d3.scaleLinear()
-                .domain([1999, 2025])
-                .range([100, 12000]); // Extended range for episode clarity
+                .domain([0, data.length - 1])
+                .range([100, data.length * 120]); 
 
-            // Arrowhead Definition
-            g.append("defs").append("marker")
-                .attr("id", "arrow").attr("viewBox", "0 0 10 10").attr("refX", 25).attr("refY", 5)
-                .attr("markerWidth", 5).attr("markerHeight", 5).attr("orient", "auto")
-                .append("path").attr("d", "M 0 0 L 10 5 L 0 10 z").attr("fill", "#ff0055");
+            const lanes = {
+                "Earth-TRN620": height * 0.15,
+                "Earth-121698": height * 0.30,
+                "Earth-10005":  height * 0.45,
+                "Earth-TRN414": height * 0.60,
+                "Earth-41633":  height * 0.75,
+                "Earth-TRN634": height * 0.90
+            };
 
-            // Connections
+            // Jitter function to prevent vertical overlap
+            const getJitter = (i) => (i % 2 === 0 ? -25 : 25);
+
+            // Draw Connections
             const links = [];
-            data.forEach(d => {
+            data.forEach((d, i) => {
+                d.idx = i;
                 if (d.connections) {
                     d.connections.split(",").forEach(tId => {
                         const target = data.find(m => m.id == tId);
@@ -69,31 +60,26 @@
                 }
             });
 
-            // Draw Time Travel Arcs
-            g.selectAll(".tt-link")
-                .data(links).enter().append("path")
+            g.selectAll(".tt-link").data(links).enter().append("path")
                 .attr("class", "tt-link")
-                .attr("marker-end", "url(#arrow)")
                 .attr("d", d => {
-                    const x1 = x(+d.s.year), y1 = lanes[d.s.lane];
-                    const x2 = x(+d.t.year), y2 = lanes[d.t.lane];
-                    // Cubic Bezier for smooth multiversal jumps
-                    return `M${x1},${y1} C${x1-200},${y1} ${x2+200},${y2} ${x2},${y2}`;
+                    const x1 = x(d.s.idx), y1 = lanes[d.s.lane] + getJitter(d.s.idx);
+                    const x2 = x(d.t.idx), y2 = lanes[d.t.lane] + getJitter(d.t.idx);
+                    return `M${x1},${y1} C${(x1+x2)/2},${y1} ${(x1+x2)/2},${y2} ${x2},${y2}`;
                 });
 
-            // Nodes (Posters)
-            const nodes = g.selectAll(".node")
-                .data(data).enter().append("g")
+            // Nodes
+            const nodes = g.selectAll(".node").data(data).enter().append("g")
                 .attr("class", "node")
-                .attr("transform", d => `translate(${x(+d.year)}, ${lanes[d.lane]})`);
+                .attr("transform", (d, i) => `translate(${x(i)}, ${lanes[d.lane] + getJitter(i)})`);
 
             nodes.append("image")
                 .attr("xlink:href", d => d.image)
-                .attr("x", -25).attr("y", -40).attr("width", 50).attr("height", 75);
+                .attr("x", -30).attr("y", -45).attr("width", 60).attr("height", 90)
+                .on("error", function() { d3.select(this).attr("xlink:href", "https://via.placeholder.com/60x90?text=Missing"); });
 
-            nodes.append("text")
-                .attr("class", "label").attr("text-anchor", "middle").attr("y", 50)
-                .text(d => d.title.length > 25 ? d.title.substring(0,22)+"..." : d.title);
+            nodes.append("text").attr("class", "label").attr("text-anchor", "middle").attr("y", 60)
+                .text(d => d.title.split(":")[0]);
         });
     </script>
 </body>
