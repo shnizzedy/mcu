@@ -7,21 +7,43 @@
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <style>
         body { font-family: 'Inter', sans-serif; background: #050505; color: #fff; margin: 0; overflow: hidden; }
-        .tt-link { fill: none; stroke: #00d4ff; stroke-width: 1.5px; opacity: 0.2; pointer-events: none; transition: opacity 0.3s; }
-        .tt-link.special-link { stroke: #f2d024; stroke-width: 2.5px; opacity: 0.6; stroke-dasharray: 5,5; }
+        
+        /* Link Styles */
+        .tt-link { fill: none; stroke: #00d4ff; stroke-width: 1.5px; opacity: 0.3; pointer-events: none; }
+        .special-link { stroke: #f2d024 !important; stroke-width: 2.5px; opacity: 0.7; stroke-dasharray: 8,4; }
+        
+        /* Node Styles */
         .node image { border-radius: 4px; border: 1px solid #333; transition: 0.2s; cursor: pointer; }
-        .node:hover image { transform: scale(1.6); border-color: #f2d024; z-index: 100; }
+        .node:hover image { transform: scale(1.5); border-color: #f2d024; z-index: 100; }
         .label { font-size: 10px; fill: #aaa; pointer-events: none; text-shadow: 1px 1px #000; font-weight: bold; }
         
+        /* Overlay & UI */
         #axis-overlay { position: fixed; left: 0; top: 0; width: 140px; height: 100%; background: linear-gradient(to right, #050505 90%, transparent); z-index: 20; pointer-events: none; border-right: 1px solid #222; }
         .lane-label { font-size: 11px; font-weight: 900; fill: #f2d024; text-transform: uppercase; letter-spacing: 1px; }
         h1 { position: fixed; top: 10px; left: 20px; color: #f2d024; font-size: 14px; z-index: 30; letter-spacing: 2px; margin: 0; padding: 10px 0; }
+        
+        /* Arrowhead Colors */
+        #arrowhead { fill: #00d4ff; }
+        #arrowhead-special { fill: #f2d024; }
     </style>
 </head>
 <body>
     <h1>FOX MARVEL MULTIVERSE CHRONOLOGY</h1>
+    
+    <svg width="0" height="0" style="position:absolute;">
+        <defs>
+            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" />
+            </marker>
+            <marker id="arrowhead-special" markerWidth="10" markerHeight="7" refX="10" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" />
+            </marker>
+        </defs>
+    </svg>
+
     <div id="axis-overlay"></div>
     <div id="viz"></div>
+
     <script src="script.js"></script>
 </body>
 </html>
