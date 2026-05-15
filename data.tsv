@@ -1,74 +1,75 @@
 id	title	year	image	lane	connections
-1	First Class	1962	https://upload.wikimedia.org/wikipedia/en/5/55/X-Men_First_Class_poster.jpg	Revised Timeline	
-2	DOFP (Past)	1973	https://upload.wikimedia.org/wikipedia/en/0/0c/X-Men_Days_of_Future_Past_poster.jpg	Revised Timeline	1
-3	Origins: Wolverine	1979	https://upload.wikimedia.org/wikipedia/en/c/c5/X-Men_Origins_Wolverine_theatrical_poster.jpg	Original Timeline	1
-4	X-Men Apocalypse	1983	https://upload.wikimedia.org/wikipedia/en/0/04/X-Men_Apocalypse_poster.jpg	Revised Timeline	2
-5	Dark Phoenix	1992	https://upload.wikimedia.org/wikipedia/en/9/9e/Dark_Phoenix_poster.jpg	Revised Timeline	4
-6	X-Men	2000	https://upload.wikimedia.org/wikipedia/en/8/81/X-menposter.jpg	Original Timeline	3
-7	X2	2003	https://upload.wikimedia.org/wikipedia/en/3/3e/X2_poster.jpg	Original Timeline	6
-8	Fantastic Four	2005	https://upload.wikimedia.org/wikipedia/en/a/a3/Fantastic_Four_poster.jpg	Original Timeline	6
-9	X-Men: Last Stand	2006	https://upload.wikimedia.org/wikipedia/en/5/50/X-Men_The_Last_Stand_poster.jpg	Original Timeline	8
-10	FF: Silver Surfer	2007	https://upload.wikimedia.org/wikipedia/en/f/f0/Rise_of_the_Silver_Surfer_poster.jpg	Original Timeline	8,9
-11	The Wolverine	2013	https://upload.wikimedia.org/wikipedia/en/7/74/The_Wolverine_poster_red_sun.jpg	Original Timeline	9
-12	The Gifted 1x01	2017.01	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Original Timeline	11
-13	The Gifted 1x02	2017.02	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Original Timeline	12
-14	The Gifted 1x03	2017.03	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Original Timeline	13
-15	The Gifted 1x04	2017.04	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Original Timeline	14
-16	The Gifted 1x05	2017.05	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Original Timeline	15
-17	The Gifted 1x06	2017.06	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Original Timeline	16
-18	The Gifted 1x07	2017.07	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Original Timeline	17
-19	The Gifted 1x08	2017.08	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Original Timeline	18
-20	The Gifted 1x09	2017.09	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Original Timeline	19
-21	The Gifted 1x10	2017.10	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Original Timeline	20
-22	The Gifted 1x11	2017.11	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Original Timeline	21
-23	The Gifted 1x12	2017.12	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Original Timeline	22
-24	The Gifted 1x13	2017.13	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Original Timeline	23
-25	The Gifted 2x01	2018.01	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Original Timeline	24
-26	The Gifted 2x02	2018.02	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Original Timeline	25
-27	The Gifted 2x03	2018.03	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Original Timeline	26
-28	The Gifted 2x04	2018.04	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Original Timeline	27
-29	The Gifted 2x05	2018.05	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Original Timeline	28
-30	The Gifted 2x06	2018.06	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Original Timeline	29
-31	The Gifted 2x07	2018.07	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Original Timeline	30
-32	The Gifted 2x08	2018.08	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Original Timeline	31
-33	The Gifted 2x09	2018.09	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Original Timeline	32
-34	The Gifted 2x10	2019.01	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Original Timeline	33
-35	The Gifted 2x11	2019.02	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Original Timeline	34
-36	The Gifted 2x12	2019.03	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Original Timeline	35
-37	The Gifted 2x13	2019.04	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Original Timeline	36
-38	The Gifted 2x14	2019.05	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Original Timeline	37
-39	The Gifted 2x15	2019.06	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Original Timeline	38
-40	The Gifted 2x16	2019.07	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Original Timeline	39
-41	DOFP (Future)	2023	https://upload.wikimedia.org/wikipedia/en/0/0c/X-Men_Days_of_Future_Past_poster.jpg	Original Timeline	11
-42	Deadpool	2016	https://upload.wikimedia.org/wikipedia/en/2/23/Deadpool_poster.jpg	Revised Timeline	5
-43	Deadpool 2	2018	https://upload.wikimedia.org/wikipedia/en/c/cf/Deadpool_2_poster.jpg	Revised Timeline	42
-44	Deadpool & Wolverine	2024	https://upload.wikimedia.org/wikipedia/en/4/4c/Deadpool_%26_Wolverine_poster.jpg	Revised Timeline	43
-45	The New Mutants	2025	https://upload.wikimedia.org/wikipedia/en/d/d5/The_New_Mutants_poster.jpg	Revised Timeline	5
-46	Logan	2029	https://upload.wikimedia.org/wikipedia/en/3/37/Logan_Poster.jpg	Revised Timeline	45
-47	Legion 1x01	2017.01	https://upload.wikimedia.org/wikipedia/en/2/24/Legion_S1_poster.jpg	Legion Reality	
-48	Legion 1x02	2017.02	https://upload.wikimedia.org/wikipedia/en/2/24/Legion_S1_poster.jpg	Legion Reality	47
-49	Legion 1x03	2017.03	https://upload.wikimedia.org/wikipedia/en/2/24/Legion_S1_poster.jpg	Legion Reality	48
-50	Legion 1x04	2017.04	https://upload.wikimedia.org/wikipedia/en/2/24/Legion_S1_poster.jpg	Legion Reality	49
-51	Legion 1x05	2017.05	https://upload.wikimedia.org/wikipedia/en/2/24/Legion_S1_poster.jpg	Legion Reality	50
-52	Legion 1x06	2017.06	https://upload.wikimedia.org/wikipedia/en/2/24/Legion_S1_poster.jpg	Legion Reality	51
-53	Legion 1x07	2017.07	https://upload.wikimedia.org/wikipedia/en/2/24/Legion_S1_poster.jpg	Legion Reality	52
-54	Legion 1x08	2017.08	https://upload.wikimedia.org/wikipedia/en/2/24/Legion_S1_poster.jpg	Legion Reality	53
-55	Legion 2x01	2018.01	https://upload.wikimedia.org/wikipedia/en/d/df/Legion_S2_poster.jpg	Legion Reality	54
-56	Legion 2x02	2018.02	https://upload.wikimedia.org/wikipedia/en/d/df/Legion_S2_poster.jpg	Legion Reality	55
-57	Legion 2x03	2018.03	https://upload.wikimedia.org/wikipedia/en/d/df/Legion_S2_poster.jpg	Legion Reality	56
-58	Legion 2x04	2018.04	https://upload.wikimedia.org/wikipedia/en/d/df/Legion_S2_poster.jpg	Legion Reality	57
-59	Legion 2x05	2018.05	https://upload.wikimedia.org/wikipedia/en/d/df/Legion_S2_poster.jpg	Legion Reality	58
-60	Legion 2x06	2018.06	https://upload.wikimedia.org/wikipedia/en/d/df/Legion_S2_poster.jpg	Legion Reality	59
-61	Legion 2x07	2018.07	https://upload.wikimedia.org/wikipedia/en/d/df/Legion_S2_poster.jpg	Legion Reality	60
-62	Legion 2x08	2018.08	https://upload.wikimedia.org/wikipedia/en/d/df/Legion_S2_poster.jpg	Legion Reality	61
-63	Legion 2x09	2018.09	https://upload.wikimedia.org/wikipedia/en/d/df/Legion_S2_poster.jpg	Legion Reality	62
-64	Legion 2x10	2018.10	https://upload.wikimedia.org/wikipedia/en/d/df/Legion_S2_poster.jpg	Legion Reality	63
-65	Legion 2x11	2018.11	https://upload.wikimedia.org/wikipedia/en/d/df/Legion_S2_poster.jpg	Legion Reality	64
-66	Legion 3x01	2019.01	https://upload.wikimedia.org/wikipedia/en/b/b3/Legion_S3_poster.jpg	Legion Reality	65
-67	Legion 3x02	2019.02	https://upload.wikimedia.org/wikipedia/en/b/b3/Legion_S3_poster.jpg	Legion Reality	66
-68	Legion 3x03	2019.03	https://upload.wikimedia.org/wikipedia/en/b/b3/Legion_S3_poster.jpg	Legion Reality	67
-69	Legion 3x04	2019.04	https://upload.wikimedia.org/wikipedia/en/b/b3/Legion_S3_poster.jpg	Legion Reality	68
-70	Legion 3x05	2019.05	https://upload.wikimedia.org/wikipedia/en/b/b3/Legion_S3_poster.jpg	Legion Reality	69
-71	Legion 3x06	2019.06	https://upload.wikimedia.org/wikipedia/en/b/b3/Legion_S3_poster.jpg	Legion Reality	70
-72	Legion 3x07	2019.07	https://upload.wikimedia.org/wikipedia/en/b/b3/Legion_S3_poster.jpg	Legion Reality	71
-73	Legion 3x08	2019.08	https://upload.wikimedia.org/wikipedia/en/b/b3/Legion_S3_poster.jpg	Legion Reality	72
+1	First Class	1962	https://upload.wikimedia.org/wikipedia/en/5/55/X-Men_First_Class_poster.jpg	Earth-TRN414	
+2	DOFP (Past)	1973	https://upload.wikimedia.org/wikipedia/en/0/0c/X-Men_Days_of_Future_Past_poster.jpg	Earth-10005	1
+3	Origins: Wolverine	1979	https://upload.wikimedia.org/wikipedia/en/c/c5/X-Men_Origins_Wolverine_theatrical_poster.jpg	Earth-10005	1
+4	Apocalypse	1983	https://upload.wikimedia.org/wikipedia/en/0/04/X-Men_Apocalypse_poster.jpg	Earth-TRN414	2
+5	Dark Phoenix	1992	https://upload.wikimedia.org/wikipedia/en/9/9e/Dark_Phoenix_poster.jpg	Earth-TRN414	4
+6	X-Men	2000	https://upload.wikimedia.org/wikipedia/en/8/81/X-menposter.jpg	Earth-10005	3
+7	X2	2003	https://upload.wikimedia.org/wikipedia/en/3/3e/X2_poster.jpg	Earth-10005	6
+8	Fantastic Four	2005	https://upload.wikimedia.org/wikipedia/en/a/a3/Fantastic_Four_poster.jpg	Earth-121698	6
+9	The Last Stand	2006	https://upload.wikimedia.org/wikipedia/en/5/50/X-Men_The_Last_Stand_poster.jpg	Earth-10005	7
+10	FF: Silver Surfer	2007	https://upload.wikimedia.org/wikipedia/en/f/f0/Rise_of_the_Silver_Surfer_poster.jpg	Earth-121698	8
+11	The Wolverine	2013	https://upload.wikimedia.org/wikipedia/en/7/74/The_Wolverine_poster_red_sun.jpg	Earth-10005	9
+12	Fantastic Four (2015)	2015	https://upload.wikimedia.org/wikipedia/en/e/e1/Fantastic_Four_2015_poster.jpg	Earth-158664	2
+13	Deadpool	2016	https://upload.wikimedia.org/wikipedia/en/2/23/Deadpool_poster.jpg	Earth-41633	5
+14	The Gifted 1x01	2017.01	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-TRN634	11
+15	The Gifted 1x02	2017.02	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-TRN634	14
+16	The Gifted 1x03	2017.03	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-TRN634	15
+17	The Gifted 1x04	2017.04	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-TRN634	16
+18	The Gifted 1x05	2017.05	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-TRN634	17
+19	The Gifted 1x06	2017.06	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-TRN634	18
+20	The Gifted 1x07	2017.07	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-TRN634	19
+21	The Gifted 1x08	2017.08	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-TRN634	20
+22	The Gifted 1x09	2017.09	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-TRN634	21
+23	The Gifted 1x10	2017.10	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-TRN634	22
+24	The Gifted 1x11	2017.11	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-TRN634	23
+25	The Gifted 1x12	2017.12	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-TRN634	24
+26	The Gifted 1x13	2017.13	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-TRN634	25
+27	The Gifted 2x01	2018.01	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-TRN634	26
+28	The Gifted 2x02	2018.02	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-TRN634	27
+29	The Gifted 2x03	2018.03	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-TRN634	28
+30	The Gifted 2x04	2018.04	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-TRN634	29
+31	The Gifted 2x05	2018.05	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-TRN634	30
+32	The Gifted 2x06	2018.06	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-TRN634	31
+33	The Gifted 2x07	2018.07	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-TRN634	32
+34	The Gifted 2x08	2018.08	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-TRN634	33
+35	The Gifted 2x09	2018.09	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-TRN634	34
+36	The Gifted 2x10	2019.01	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-TRN634	35
+37	The Gifted 2x11	2019.02	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-TRN634	36
+38	The Gifted 2x12	2019.03	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-TRN634	37
+39	The Gifted 2x13	2019.04	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-TRN634	38
+40	The Gifted 2x14	2019.05	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-TRN634	39
+41	The Gifted 2x15	2019.06	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-TRN634	40
+42	The Gifted 2x16	2019.07	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-TRN634	41
+43	DOFP (Future)	2023	https://upload.wikimedia.org/wikipedia/en/0/0c/X-Men_Days_of_Future_Past_poster.jpg	Earth-10005	11
+44	Deadpool 2	2018	https://upload.wikimedia.org/wikipedia/en/c/cf/Deadpool_2_poster.jpg	Earth-41633	13
+45	Deadpool & Wolverine	2024	https://upload.wikimedia.org/wikipedia/en/4/4c/Deadpool_%26_Wolverine_poster.jpg	Earth-10005	44
+46	The New Mutants	2025	https://upload.wikimedia.org/wikipedia/en/d/d5/The_New_Mutants_poster.jpg	Earth-TRN414	5
+47	Logan	2029	https://upload.wikimedia.org/wikipedia/en/3/37/Logan_Poster.jpg	Earth-17315	46
+48	Legion 1x01	2017.01	https://upload.wikimedia.org/wikipedia/en/2/24/Legion_S1_poster.jpg	Earth-TRN620	1
+49	Legion 1x02	2017.02	https://upload.wikimedia.org/wikipedia/en/2/24/Legion_S1_poster.jpg	Earth-TRN620	48
+50	Legion 1x03	2017.03	https://upload.wikimedia.org/wikipedia/en/2/24/Legion_S1_poster.jpg	Earth-TRN620	49
+51	Legion 1x04	2017.04	https://upload.wikimedia.org/wikipedia/en/2/24/Legion_S1_poster.jpg	Earth-TRN620	50
+52	Legion 1x05	2017.05	https://upload.wikimedia.org/wikipedia/en/2/24/Legion_S1_poster.jpg	Earth-TRN620	51
+53	Legion 1x06	2017.06	https://upload.wikimedia.org/wikipedia/en/2/24/Legion_S1_poster.jpg	Earth-TRN620	52
+54	Legion 1x07	2017.07	https://upload.wikimedia.org/wikipedia/en/2/24/Legion_S1_poster.jpg	Earth-TRN620	53
+55	Legion 1x08	2017.08	https://upload.wikimedia.org/wikipedia/en/2/24/Legion_S1_poster.jpg	Earth-TRN620	54
+56	Legion 2x01	2018.01	https://upload.wikimedia.org/wikipedia/en/d/df/Legion_S2_poster.jpg	Earth-TRN620	55
+57	Legion 2x02	2018.02	https://upload.wikimedia.org/wikipedia/en/d/df/Legion_S2_poster.jpg	Earth-TRN620	56
+58	Legion 2x03	2018.03	https://upload.wikimedia.org/wikipedia/en/d/df/Legion_S2_poster.jpg	Earth-TRN620	57
+59	Legion 2x04	2018.04	https://upload.wikimedia.org/wikipedia/en/d/df/Legion_S2_poster.jpg	Earth-TRN620	58
+60	Legion 2x05	2018.05	https://upload.wikimedia.org/wikipedia/en/d/df/Legion_S2_poster.jpg	Earth-TRN620	59
+61	Legion 2x06	2018.06	https://upload.wikimedia.org/wikipedia/en/d/df/Legion_S2_poster.jpg	Earth-TRN620	60
+62	Legion 2x07	2018.07	https://upload.wikimedia.org/wikipedia/en/d/df/Legion_S2_poster.jpg	Earth-TRN620	61
+63	Legion 2x08	2018.08	https://upload.wikimedia.org/wikipedia/en/d/df/Legion_S2_poster.jpg	Earth-TRN620	62
+64	Legion 2x09	2018.09	https://upload.wikimedia.org/wikipedia/en/d/df/Legion_S2_poster.jpg	Earth-TRN620	63
+65	Legion 2x10	2018.10	https://upload.wikimedia.org/wikipedia/en/d/df/Legion_S2_poster.jpg	Earth-TRN620	64
+66	Legion 2x11	2018.11	https://upload.wikimedia.org/wikipedia/en/d/df/Legion_S2_poster.jpg	Earth-TRN620	65
+67	Legion 3x01	2019.01	https://upload.wikimedia.org/wikipedia/en/b/b3/Legion_S3_poster.jpg	Earth-TRN620	66
+68	Legion 3x02	2019.02	https://upload.wikimedia.org/wikipedia/en/b/b3/Legion_S3_poster.jpg	Earth-TRN620	67
+69	Legion 3x03	2019.03	https://upload.wikimedia.org/wikipedia/en/b/b3/Legion_S3_poster.jpg	Earth-TRN620	68
+70	Legion 3x04	2019.04	https://upload.wikimedia.org/wikipedia/en/b/b3/Legion_S3_poster.jpg	Earth-TRN620	69
+71	Legion 3x05	2019.05	https://upload.wikimedia.org/wikipedia/en/b/b3/Legion_S3_poster.jpg	Earth-TRN620	70
+72	Legion 3x06	2019.06	https://upload.wikimedia.org/wikipedia/en/b/b3/Legion_S3_poster.jpg	Earth-TRN620	71
+73	Legion 3x07	2019.07	https://upload.wikimedia.org/wikipedia/en/b/b3/Legion_S3_poster.jpg	Earth-TRN620	72
+74	Legion 3x08	2019.08	https://upload.wikimedia.org/wikipedia/en/b/b3/Legion_S3_poster.jpg	Earth-TRN620	73
