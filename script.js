@@ -21,44 +21,43 @@ const zoom = d3.zoom().scaleExtent([0.1, 2]).on("zoom", (e) => {
 });
 svg.call(zoom);
 
-d3.select(window).on("keydown", (e) => {
-    const transform = d3.zoomTransform(svg.node());
-    let { x, y, k } = transform;
-    const step = 350;
-    if (e.key === "ArrowRight") x -= step;
-    if (e.key === "ArrowLeft") x += step;
-    if (e.key === "ArrowDown") y -= step/2;
-    if (e.key === "ArrowUp") y += step/2;
-    svg.transition().duration(200).call(zoom.transform, d3.zoomIdentity.translate(x, y).scale(k));
-});
-
 d3.tsv("data.tsv").then(data => {
     data.forEach(d => { d.yearNum = parseFloat(d.year); d.lane = d.lane.trim(); });
     data.sort((a, b) => a.yearNum - b.yearNum);
 
+    // Position items sequentially
     data.forEach((d, i) => {
         d.xPos = i * 210 + 250;
         d.yPos = lanes[d.lane] || 500;
     });
 
     const links = [];
-    data.forEach(d => {
-        if (d.connections) {
-            d.connections.split(",").forEach(tId => {
-                const target = data.find(m => m.id.trim() === tId.trim());
-                if (target) links.push({ s: d, t: target });
+    data.forEach(targetNode => {
+        if (targetNode.connections) {
+            targetNode.connections.split(",").forEach(sourceId => {
+                const sourceNode = data.find(m => m.id.trim() === sourceId.trim());
+                if (sourceNode) {
+                    // We ALWAYS draw FROM source TO target
+                    links.push({ s: sourceNode, t: targetNode });
+                }
             });
         }
     });
 
     g.selectAll(".tt-link").data(links).enter().append("path")
-        .attr("class", d => ((d.s.id=="47" && d.t.id=="45") || (d.s.id=="74" && d.t.id=="48")) ? "tt-link special-link" : "tt-link")
-        .attr("marker-end", d => ((d.s.id=="47" && d.t.id=="45") || (d.s.id=="74" && d.t.id=="48")) ? "url(#arrowhead-special)" : "url(#arrowhead)")
+        .attr("class", d => ((d.s.id=="47" && d.t.id=="45") || (d.t.id=="48" && d.s.id=="74")) ? "tt-link special-link" : "tt-link")
+        .attr("marker-end", d => ((d.s.id=="47" && d.t.id=="45") || (d.t.id=="48" && d.s.id=="74")) ? "url(#arrowhead-special)" : "url(#arrowhead)")
         .attr("d", d => {
-            const sx = d.s.xPos + 35, sy = d.s.yPos, tx = d.t.xPos - 35, ty = d.t.yPos;
+            const sx = d.s.xPos + 35; // Exit Right
+            const sy = d.s.yPos;
+            const tx = d.t.xPos - 42; // Enter Left (Gap increased to show arrow)
+            const ty = d.t.yPos;
+            
             const dx = tx - sx;
+            
             if (dx < 0) { // Legion Backward Loop
-                return `M${sx},${sy} C${sx + 150},${sy - 200} ${tx - 150},${ty - 200} ${tx},${ty}`;
+                const pull = Math.abs(dx) * 0.5;
+                return `M${sx},${sy} C${sx + 150},${sy - 250} ${tx - 150},${ty - 250} ${tx},${ty}`;
             }
             // Standard forward curve
             return `M${sx},${sy} C${sx + dx/2},${sy} ${tx - dx/2},${ty} ${tx},${ty}`;
