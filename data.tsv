@@ -116,7 +116,7 @@ id	title	year	image	lane	connections
 179	Civil War	2016.10		Earth-199999	178
 180	Homecoming	2016.20	https://upload.wikimedia.org/wikipedia/en/f/f9/Spider-Man_Homecoming_poster.jpg	Earth-199999	179,213
 181	Doctor Strange	2016.30		Earth-199999	180
-182	Vol. 2	2017.10		Earth-199999	181
+182	Guardians of the Galaxy, Vol. 2	2017.10		Earth-199999	181
 183	The Ghost	2017.20	./assets/images/199999/the_ghost.webp	Earth-199999	182
 184	Black Panther	2018.10		Earth-199999	183
 185	Ragnarok	2018.20		Earth-199999	184
@@ -200,7 +200,7 @@ id	title	year	image	lane	connections
 201	Normal Amount of Rage	2022.50	./assets/images/199999/normal_amount_of_rage.webp	Earth-199999	200
 202	Wakanda Forever	2022.60		Earth-199999	201
 203	Quantumania	2023.10		Earth-199999	202
-204	Vol. 3	2023.20		Earth-199999	203
+204	Guardians of the Galaxy, Vol. 3	2023.20		Earth-199999	203
 205	Resurrection	2023.30	./assets/images/199999/resurrection.webp	Earth-199999	204
 206	Ouroboros	2023.40	./assets/images/199999/ouroboros.webp	Earth-199999	205
 43	Days of Future Past	2023	https://upload.wikimedia.org/wikipedia/en/0/0c/X-Men_Days_of_Future_Past_poster.jpg	Earth-41578	1,11,43
@@ -208,7 +208,7 @@ id	title	year	image	lane	connections
 76	The Marvels	2023.7	https://upload.wikimedia.org/wikipedia/en/7/7a/The_Marvels_poster.jpg	Earth-199999	44,77
 207	Chafa	2024.10	./assets/images/199999/chafa.webp	Earth-199999	76
 208	Seekest Thou the Road	2024.20	./assets/images/199999/seekest_thou_the_road.webp	Earth-199999	207
-45	Deadpool & Wolverine	2024	https://upload.wikimedia.org/wikipedia/en/4/4c/Deadpool_%26_Wolverine_poster.jpg	Earth-41578	10,44,47,76,216,251
+45	Deadpool & Wolverine	2024	https://upload.wikimedia.org/wikipedia/en/4/4c/Deadpool_%26_Wolverine_poster.jpg	Earth-10005	10,44,47,76,216,251
 209	Brave New World	2025.10		Earth-199999	208
 210	Thunderbolts*	2025.20		Earth-199999	209
 221	Heaven's Half Hour	2025.15	./assets/images/199999/heaven's_half_hour.webp	Earth-199999	208
