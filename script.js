@@ -3,7 +3,7 @@ const svg = d3.select("#viz").append("svg").attr("width", width).attr("height", 
 const g = svg.append("g");
 
 const axisSvg = d3.select("#axis-overlay").append("svg").attr("width", width).attr("height", 60);
-const labelGroup = axisSvg.append("g"); 
+const labelGroup = axisSvg.append("g");
 
 // SYNCED ZOOM
 const zoom = d3.zoom()
@@ -29,9 +29,9 @@ d3.select(window).on("keydown", (e) => {
 
 // LOAD DATA
 d3.tsv("data.tsv").then(data => {
-    data.forEach(d => { 
-        d.yearNum = parseFloat(d.year); 
-        d.lane = d.lane.trim(); 
+    data.forEach(d => {
+        d.yearNum = parseFloat(d.year);
+        d.lane = d.lane.trim();
     });
 
     // 1. DATA-DRIVEN STRIPPED NUMERIC SORTING FOR LANES
@@ -40,7 +40,7 @@ d3.tsv("data.tsv").then(data => {
         const numB = parseInt(b.replace(/\D/g, ""), 10) || 0;
         return numA - numB;
     });
-    
+
     const laneSpacing = 160;
     const laneStart = 150;
     const laneMap = {};
@@ -56,7 +56,7 @@ d3.tsv("data.tsv").then(data => {
     // Draw Lane vertical timeline guidelines and Dynamic Column Titles
     uniqueLanes.forEach(name => {
         const xCoord = laneMap[name];
-        
+
         // Header Text synced with Lane Color configuration
         labelGroup.append("text")
             .attr("class", "lane-label")
@@ -75,9 +75,9 @@ d3.tsv("data.tsv").then(data => {
     // 2. SCRUNCH ENGINE
     data.sort((a, b) => a.yearNum - b.yearNum);
 
-    const verticalStep = 150; 
-    const laneNextAvailableY = {}; 
-    const rowsRegistry = []; 
+    const verticalStep = 150;
+    const laneNextAvailableY = {};
+    const rowsRegistry = [];
 
     uniqueLanes.forEach(lane => { laneNextAvailableY[lane] = 120; });
 
@@ -124,14 +124,14 @@ d3.tsv("data.tsv").then(data => {
         .attr("marker-end", d => ((d.s.id=="47" && d.t.id=="45") || (d.t.id=="48" && d.s.id=="74")) ? "url(#arrowhead-special)" : "url(#arrowhead)")
         .attr("d", d => {
             const sx = d.s.xPos;
-            const sy = d.s.yPos + 50;  
+            const sy = d.s.yPos + 50;
             const tx = d.t.xPos;
-            const ty = d.t.yPos - 55;  
-            
+            const ty = d.t.yPos - 55;
+
             const dy = ty - sy;
-            
+
             if (dy < 0) { // Backward Loop
-                const loopSpread = 240; 
+                const loopSpread = 240;
                 return `M${sx},${sy} C${sx - loopSpread},${sy + 100} ${tx - loopSpread},${ty - 100} ${tx},${ty}`;
             }
 
@@ -148,12 +148,12 @@ d3.tsv("data.tsv").then(data => {
     // 5. DRAW POSTERS
     const nodes = g.selectAll(".node").data(data).enter().append("g")
         .attr("class", "node").attr("transform", d => `translate(${d.xPos}, ${d.yPos})`);
-    
+
     nodes.append("image")
         .attr("xlink:href", d => d.image)
         .attr("x", -35).attr("y", -50)
         .attr("width", 70).attr("height", 100);
-    
+
     nodes.append("text")
         .attr("class", "label")
         .attr("text-anchor", "middle")

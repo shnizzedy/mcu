@@ -1,5 +1,5 @@
 id	title	year	image	lane	connections
-126	Into the Lion's Den	1940.1	./assets/images/199999/into_the_lion's_den.webp	Earth-199999	
+126	Into the Lion's Den	1940.1	./assets/images/199999/into_the_lion's_den.webp	Earth-199999
 127	Legends and Lies	1940.2		Earth-199999	126
 128	Lost and Found	1940.3		Earth-199999	127
 129	The Last Panther	1940.4		Earth-199999	128
@@ -24,7 +24,7 @@ id	title	year	image	lane	connections
 103	A Little Song and Dance	1947.09		Earth-199999	102
 104	Hollywood Ending	1947.10		Earth-199999	103
 1	First Class	1962.1	https://upload.wikimedia.org/wikipedia/en/5/55/X-MenFirstClassMoviePoster.jpg	Earth-10005	2
-2	The High Hand #1	1962.0.5	./assets/images/10005/high_hand.webp	Earth-10005	
+2	The High Hand #1	1962.0.5	./assets/images/10005/high_hand.webp	Earth-10005
 3	Origins: Wolverine	1979	https://upload.wikimedia.org/wikipedia/en/0/08/X-Men_Origins_Wolverine_theatrical_poster.jpg	Earth-41578	1
 4	Apocalypse	1983	https://upload.wikimedia.org/wikipedia/en/0/04/X-Men_-_Apocalypse.jpg	Earth-10005	43
 5	Dark Phoenix	1992	https://upload.wikimedia.org/wikipedia/en/9/9e/Dark_Phoenix_%28film%29.png	Earth-10005	4
@@ -34,7 +34,7 @@ id	title	year	image	lane	connections
 6.2	Wolverine	2003.0	./assets/images/41578/wolverine.webp	Earth-41578	6.1
 6.2	Nightcrawler	2003.1	./assets/images/41578/nightcrawler.webp	Earth-41578	6.2
 7	X2	2003.2	https://upload.wikimedia.org/wikipedia/en/3/3e/X2_poster.jpg	Earth-41578	6.1
-78	Hulk	2003	https://upload.wikimedia.org/wikipedia/en/5/59/Hulk_movie.jpg	Earth-400083	
+78	Hulk	2003	https://upload.wikimedia.org/wikipedia/en/5/59/Hulk_movie.jpg	Earth-400083
 8	Fantastic Four	2005	https://upload.wikimedia.org/wikipedia/en/4/4a/Fantastic_Four_poster.jpg	Earth-121698	7
 9	The Last Stand	2006	https://upload.wikimedia.org/wikipedia/en/5/5b/X-Men_The_Last_Stand_theatrical_poster.jpg	Earth-41578	7
 9.1	Fight the Cure	2006.1	./assets/images/41578/fight_the_cure.webp	Earth-41578	9
@@ -214,14 +214,14 @@ id	title	year	image	lane	connections
 210	Thunderbolts*	2025.20		Earth-199999	209
 46	The New Mutants	2025	https://upload.wikimedia.org/wikipedia/en/1/1a/TheNewMutantsPoster.jpeg	Earth-10005	5
 47	Logan	2029	https://upload.wikimedia.org/wikipedia/en/3/37/Logan_2017_poster.jpg	Earth-17315	46
-211	Spider-Man	2002	https://upload.wikimedia.org/wikipedia/en/6/6c/Spider-Man_%282002_film%29_poster.jpg	Earth-96283	
+211	Spider-Man	2002	https://upload.wikimedia.org/wikipedia/en/6/6c/Spider-Man_%282002_film%29_poster.jpg	Earth-96283
 212	Spider-Man 2	2004	https://upload.wikimedia.org/wikipedia/en/4/4e/Spider-Man_2_USA_poster.jpg	Earth-96283	211
 213	Spider-Man 3	2004	https://upload.wikimedia.org/wikipedia/en/7/7a/Spider-Man_3%2C_International_Poster.jpg	Earth-96283	212
 214	Heroes and Villains	2003	./assets/images/760207/heroes_and_villains.webp	Earth-760207	211,215
-215	Daredevil	2003	https://upload.wikimedia.org/wikipedia/en/0/04/Daredevil_poster.JPG	Earth-701306	
+215	Daredevil	2003	https://upload.wikimedia.org/wikipedia/en/0/04/Daredevil_poster.JPG	Earth-701306
 216	Elektra	2005	https://upload.wikimedia.org/wikipedia/en/2/21/Elektra_teaser.jpg	Earth-701306	215
 217	Trinity	2004	https://upload.wikimedia.org/wikipedia/en/8/86/Blade_Trinity_poster.JPG	Earth-26320	219
-218	Blade	1998	https://upload.wikimedia.org/wikipedia/en/1/19/Blade_movie.jpg	Earth-26320	
+218	Blade	1998	https://upload.wikimedia.org/wikipedia/en/1/19/Blade_movie.jpg	Earth-26320
 219	Blade II	2002	https://upload.wikimedia.org/wikipedia/en/6/6d/Blade_II_movie.jpg	Earth-26320	218
 219	House of Chthon	2006.1	./assets/images/26320/house_of_chthon.webp	Earth-26320	217
 220	Conclave	2006.13	./assets/images/26320/conclave.webp	Earth-26320	217
