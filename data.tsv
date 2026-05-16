@@ -1,74 +1,87 @@
 id	title	year	image	lane	connections
-1	First Class	1962	https://upload.wikimedia.org/wikipedia/en/5/55/X-Men_First_Class_poster.jpg	Earth-10005	
-3	Origins: Wolverine	1979	https://upload.wikimedia.org/wikipedia/en/c/c5/X-Men_Origins_Wolverine_theatrical_poster.jpg	Earth-41578	1
-4	Apocalypse	1983	https://upload.wikimedia.org/wikipedia/en/0/04/X-Men_Apocalypse_poster.jpg	Earth-10005	43
-5	Dark Phoenix	1992	https://upload.wikimedia.org/wikipedia/en/9/9e/Dark_Phoenix_poster.jpg	Earth-10005	4
-6	X-Men	2000	https://upload.wikimedia.org/wikipedia/en/8/81/X-menposter.jpg	Earth-41578	3
-7	X2	2003	https://upload.wikimedia.org/wikipedia/en/3/3e/X2_poster.jpg	Earth-41578	6
-8	Fantastic Four	2005	https://upload.wikimedia.org/wikipedia/en/a/a3/Fantastic_Four_poster.jpg	Earth-121698	7
-9	The Last Stand	2006	https://upload.wikimedia.org/wikipedia/en/5/50/X-Men_The_Last_Stand_poster.jpg	Earth-41578	7
-10	FF: Silver Surfer	2007	https://upload.wikimedia.org/wikipedia/en/f/f0/Rise_of_the_Silver_Surfer_poster.jpg	Earth-121698	8
-11	The Wolverine	2013	https://upload.wikimedia.org/wikipedia/en/7/74/The_Wolverine_poster_red_sun.jpg	Earth-41578	9
-12	Fantastic Four (2015)	2015	https://upload.wikimedia.org/wikipedia/en/e/e1/Fantastic_Four_2015_poster.jpg	Earth-158664	43
-13	Deadpool	2016	https://upload.wikimedia.org/wikipedia/en/2/23/Deadpool_poster.jpg	Earth-41633	5
-14	The Gifted 1x01	2017.01	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-17372	11
-15	The Gifted 1x02	2017.02	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-17372	14
-16	The Gifted 1x03	2017.03	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-17372	15
-17	The Gifted 1x04	2017.04	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-17372	16
-18	The Gifted 1x05	2017.05	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-17372	17
-19	The Gifted 1x06	2017.06	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-17372	18
-20	The Gifted 1x07	2017.07	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-17372	19
-21	The Gifted 1x08	2017.08	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-17372	20
-22	The Gifted 1x09	2017.09	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-17372	21
-23	The Gifted 1x10	2017.10	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-17372	22
-24	The Gifted 1x11	2017.11	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-17372	23
-25	The Gifted 1x12	2017.12	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-17372	24
-26	The Gifted 1x13	2017.13	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-17372	25
-27	The Gifted 2x01	2018.01	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-17372	26
-28	The Gifted 2x02	2018.02	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-17372	27
-29	The Gifted 2x03	2018.03	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-17372	28
-30	The Gifted 2x04	2018.04	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-17372	29
-31	The Gifted 2x05	2018.05	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-17372	30
-32	The Gifted 2x06	2018.06	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-17372	31
-33	The Gifted 2x07	2018.07	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-17372	32
-34	The Gifted 2x08	2018.08	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-17372	33
-35	The Gifted 2x09	2018.09	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-17372	34
-36	The Gifted 2x10	2019.01	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-17372	35
-37	The Gifted 2x11	2019.02	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-17372	36
-38	The Gifted 2x12	2019.03	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-17372	37
-39	The Gifted 2x13	2019.04	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-17372	38
-40	The Gifted 2x14	2019.05	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-17372	39
-41	The Gifted 2x15	2019.06	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-17372	40
-42	The Gifted 2x16	2019.07	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-17372	41
-43	Days of Future Past	2023	https://upload.wikimedia.org/wikipedia/en/0/0c/X-Men_Days_of_Future_Past_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail_unscaled	Earth-41578	1,11,43
-44	Deadpool 2	2018	https://upload.wikimedia.org/wikipedia/en/c/cf/Deadpool_2_poster.jpg	Earth-41633	13
-45	Deadpool & Wolverine	2024	https://upload.wikimedia.org/wikipedia/en/4/4c/Deadpool_%26_Wolverine_poster.jpg	Earth-41578	44,47
-46	The New Mutants	2025	https://upload.wikimedia.org/wikipedia/en/d/d5/The_New_Mutants_poster.jpg	Earth-10005	5
-47	Logan	2029	https://upload.wikimedia.org/wikipedia/en/3/37/Logan_Poster.jpg	Earth-17315	46
-48	Chapter 1	2017.01	https://i.imgur.com/LLX8hNj.jpeg	Earth-TRN620	1
-49	Chapter 2	2017.02	https://i.imgur.com/nLK6bpm.jpeg	Earth-TRN620	48
-50	Chapter 3	2017.03	https://i.imgur.com/w1gLtfe.jpeg	Earth-TRN620	49
-51	Chapter 4	2017.04	https://i.imgur.com/f19GXq0.jpeg	Earth-TRN620	50
-52	Chapter 5	2017.05	https://i.imgur.com/UV7pZjY.jpeg	Earth-TRN620	51
-53	Chapter 6	2017.06	https://i.imgur.com/hVcJAc7.jpeg	Earth-TRN620	52
-54	Chapter 7	2017.07	https://i.imgur.com/xjWkqMY.jpeg	Earth-TRN620	53
-55	Chapter 8	2017.08	https://i.imgur.com/Fa6U4DZ.jpeg	Earth-TRN620	54
-56	Chapter 9	2018.01	https://i.imgur.com/YnWxWH7.png	Earth-TRN620	55
-57	Chapter 10	2018.02	https://i.imgur.com/RBtalHo.png	Earth-TRN620	56
-58	Chapter 11	2018.03	https://i.imgur.com/VZKbJk0.png	Earth-TRN620	57
-59	Chapter 12	2018.04	https://i.imgur.com/pFwohU2.png	Earth-TRN620	58
-60	Chapter 13	2018.05	https://i.imgur.com/zOzfoPh.png	Earth-TRN620	59
-61	Chatper 14	2018.06	https://i.imgur.com/SGqNBWJ.png	Earth-TRN620	60
-62	Chatper 15	2018.07	https://i.imgur.com/JvEhZ6b.png	Earth-TRN620	61
-63	Chapter 16	2018.08	https://i.imgur.com/kLlchDg.png	Earth-TRN620	62
-64	Chapter 17	2018.09	https://i.imgur.com/1sNSN4h.png	Earth-TRN620	63
-65	Chapter 18	2018.10	https://i.imgur.com/e6pEqDW.png	Earth-TRN620	64
-66	Chapter 19	2018.11	https://i.imgur.com/SXAI3K2.png	Earth-TRN620	65
-67	Chapter 20	2019.01	https://i0.wp.com/geekade.com/wp-content/uploads/2019/07/S3-E1-Title-Card.png	Earth-TRN620	66
-68	Chapter 21	2019.02	https://i0.wp.com/geekade.com/wp-content/uploads/2019/07/S3-E2-Title-Card.png	Earth-TRN620	67
-69	Chapter 22	2019.03	https://i0.wp.com/geekade.com/wp-content/uploads/2019/07/S3-E3-Title-Card.png	Earth-TRN620	68
-70	Chapter 23	2019.04	https://i0.wp.com/geekade.com/wp-content/uploads/2019/07/S3-E4-Title-Card.png	Earth-TRN620	69
-71	Chapter 24	2019.05	https://i0.wp.com/geekade.com/wp-content/uploads/2019/07/S3-E5-Title-Card.png	Earth-TRN620	70
-72	Chapter 25	2019.06	https://i0.wp.com/geekade.com/wp-content/uploads/2019/08/S3-E6-Title-Card.png	Earth-TRN620	71
-73	Chapter 26	2019.07	https://i0.wp.com/geekade.com/wp-content/uploads/2019/08/S3-E7-Title-Card.png	Earth-TRN620	72
-74	Chapter 27	2019.08	https://i0.wp.com/geekade.com/wp-content/uploads/2019/08/S3-E8-Title-Card.png	Earth-TRN620	73,48
+1	First Class	1962.1	https://upload.wikimedia.org/wikipedia/en/5/55/X-MenFirstClassMoviePoster.jpg	Earth-10005	2
+2	The High Hand #1	1962.0.5	./assets/images/10005/high_hand.webp	Earth-10005	
+3	Origins: Wolverine	1979	https://upload.wikimedia.org/wikipedia/en/0/08/X-Men_Origins_Wolverine_theatrical_poster.jpg	Earth-41578	1
+4	Apocalypse	1983	https://upload.wikimedia.org/wikipedia/en/0/04/X-Men_-_Apocalypse.jpg	Earth-10005	43
+5	Dark Phoenix	1992	https://upload.wikimedia.org/wikipedia/en/9/9e/Dark_Phoenix_%28film%29.png	Earth-10005	4
+6	X-Men	2000	https://upload.wikimedia.org/wikipedia/en/8/81/X-MenfilmPoster.jpg	Earth-41578	3
+6.1	iconnect special	2001	./assets/images/41578/iconnect_special.webp	Earth-41578	6
+6.2	Wolverine	2003.0	./assets/images/41578/wolverine.webp	Earth-41578	6.1
+6.2	Nightcrawler	2003.1	./assets/images/41578/nightcrawler.webp	Earth-41578	6.2
+7	X2	2003.2	https://upload.wikimedia.org/wikipedia/en/3/3e/X2_poster.jpg	Earth-41578	6.1
+8	Fantastic Four	2005	https://upload.wikimedia.org/wikipedia/en/4/4a/Fantastic_Four_poster.jpg	Earth-121698	7
+9	The Last Stand	2006	https://upload.wikimedia.org/wikipedia/en/5/5b/X-Men_The_Last_Stand_theatrical_poster.jpg	Earth-41578	7
+9.1	Fight the Cure	2006.1	./assets/images/41578/fight_the_cure.webp	Earth-41578	9
+10	FF: Silver Surfer	2007	https://upload.wikimedia.org/wikipedia/en/e/e6/Fantastic_Four_2_Poster.jpg	Earth-121698	8
+11	The Wolverine	2013	https://upload.wikimedia.org/wikipedia/en/7/74/The_Wolverine_posterUS.jpg	Earth-41578	9.1
+12	Fant4stic	2015	https://upload.wikimedia.org/wikipedia/en/f/f4/Fantastic_Four_2015_poster.jpg	Earth-15866	11
+13	Deadpool	2016	https://upload.wikimedia.org/wikipedia/en/2/23/Deadpool_%282016_poster%29.png	Earth-10005	5
+14	eXposed	2017.01	./assets/images/17372/eXposed.avif	Earth-17372	11
+15	rX	2017.02	./assets/images/17372/rX.avif	Earth-17372	14
+16	eXodus	2017.03	./assets/images/17372/eXodus.avif	Earth-17372	15
+17	eXit strategy	2017.04	./assets/images/17372/eXit_strategy.avif	Earth-17372	16
+18	boXed in	2017.05	./assets/images/17372/boXed_in.avif	Earth-17372	17
+19	got your siX	2017.06	./assets/images/17372/got_your_siX.avif	Earth-17372	18
+20	eXtreme measures	2017.07	./assets/images/17372/eXtreme_measures.avif	Earth-17372	19
+21	threat of eXtinction	2017.08	./assets/images/17372/threat_of_eXtinction.avif	Earth-17372	20
+22	outfoX	2017.09	./assets/images/17372/outfoX.avif	Earth-17372	21
+23	eXploited	2017.10	./assets/images/17372/eXploited.avif	Earth-17372	22
+24	3X1	2017.11	./assets/images/17372/3X1.avif	Earth-17372	23
+25	eXtraction	2017.12	./assets/images/17372/eXtraction.avif	Earth-17372	24
+26	X-roads	2017.13	./assets/images/17372/X-roads.avif	Earth-17372	25
+27	eMergence	2018.01	./assets/images/17372/eMergence.avif	Earth-17372	26
+28	unMoored	2018.02	./assets/images/17372/unMoored.avif	Earth-17372	27
+29	coMplications	2018.03	./assets/images/17372/coMplications.avif	Earth-17372	28
+30	outMatched	2018.04	./assets/images/17372/outMatched.avif	Earth-17372	29
+31	afterMath	2018.05	./assets/images/17372/afterMath.avif	Earth-17372	30
+32	iMprint	2018.06	./assets/images/17372/iMprint.avif	Earth-17372	31
+33	no Mercy	2018.07	./assets/images/17372/no_Mercy.avif	Earth-17372	32
+34	the dreaM	2018.08	./assets/images/17372/the_dreaM.avif	Earth-17372	33
+35	gaMe changer	2018.09	./assets/images/17372/gaMe_changer.avif	Earth-17372	34
+36	eneMy of My eneMy	2019.01	./assets/images/17372/eneMy_of_My_eneMy.avif	Earth-17372	35
+37	meMento	2019.02	./assets/images/17372/meMento.avif	Earth-17372	36
+38	hoMe	2019.03	./assets/images/17372/hoMe.avif	Earth-17372	37
+39	teMpted	2019.04	./assets/images/17372/teMpted.avif	Earth-17372	38
+40	calaMity	2019.05	./assets/images/17372/calaMity.avif	Earth-17372	39
+41	Monsters	2019.06	./assets/images/17372/Monsters.avif	Earth-17372	40
+42	oMens	2019.07	./assets/images/17372/oMens.avif	Earth-17372	41
+43	Days of Future Past	2023	https://upload.wikimedia.org/wikipedia/en/0/0c/X-Men_Days_of_Future_Past_poster.jpg	Earth-41578	1,11,43
+44	Deadpool 2	2018	https://upload.wikimedia.org/wikipedia/en/c/cf/Deadpool_2_poster.jpg	Earth-10005	44
+45	Deadpool & Wolverine	2024	https://upload.wikimedia.org/wikipedia/en/4/4c/Deadpool_%26_Wolverine_poster.jpg	Earth-41578	10,44,47
+46	The New Mutants	2025	https://upload.wikimedia.org/wikipedia/en/1/1a/TheNewMutantsPoster.jpeg	Earth-10005	5
+46.5	No Good Deed	2016.0.5	./assets/images/10005/no_good_deed.webp	Earth-10005	13
+47	Logan	2029	https://upload.wikimedia.org/wikipedia/en/3/37/Logan_2017_poster.jpg	Earth-17315	46
+48	Chapter 1	2017.01	./assets/images/17040/chapter_1.jpeg	Earth-17040	1,74
+49	Chapter 2	2017.02	./assets/images/17040/chapter_2.jpeg	Earth-17040	48
+50	Chapter 3	2017.03	./assets/images/17040/chapter_3.jpeg	Earth-17040	49
+51	Chapter 4	2017.04	./assets/images/17040/chapter_4.jpeg	Earth-17040	50
+52	Chapter 5	2017.05	./assets/images/17040/chapter_5.jpeg	Earth-17040	51
+53	Chapter 6	2017.06	./assets/images/17040/chapter_6.jpeg	Earth-17040	52
+54	Chapter 7	2017.07	./assets/images/17040/chapter_7.jpeg	Earth-17040	53
+55	Chapter 8	2017.08	./assets/images/17040/chapter_8.jpeg	Earth-19264	54
+56	Chapter 9	2018.01	./assets/images/17040/chapter_9.png	Earth-17040	55
+57	Chapter 10	2018.02	./assets/images/17040/chapter_10.png	Earth-17040	56
+58	Chapter 11	2018.03	./assets/images/17040/chapter_11.png	Earth-17040	57
+59	Chapter 12	2018.04	./assets/images/17040/chapter_12.png	Earth-17040	58
+60	Chapter 13	2018.05	./assets/images/17040/chapter_13.png	Earth-17040	59
+61	Chatper 14	2018.06	./assets/images/17040/chapter_14.png	Earth-17040	60
+62	Chatper 15	2018.07	./assets/images/17040/chapter_15.png	Earth-17040	61
+63	Chapter 16	2018.08	./assets/images/17040/chapter_16.png	Earth-17040	62
+64	Chapter 17	2018.09	./assets/images/17040/chapter_17.png	Earth-17040	63
+65	Chapter 18	2018.10	./assets/images/17040/chapter_18.png	Earth-17040	64
+66	Chapter 19	2018.11	./assets/images/17040/chapter_19.png	Earth-17040	65
+67	Chapter 20	2019.01	https://i0.wp.com/geekade.com/wp-content/uploads/2019/07/S3-E1-Title-Card.png	Earth-17040	66
+68	Chapter 21	2019.02	https://i0.wp.com/geekade.com/wp-content/uploads/2019/07/S3-E2-Title-Card.png	Earth-17040	67
+69	Chapter 22	2019.03	https://i0.wp.com/geekade.com/wp-content/uploads/2019/07/S3-E3-Title-Card.png	Earth-17040	68
+70	Chapter 23	2019.04	https://i0.wp.com/geekade.com/wp-content/uploads/2019/07/S3-E4-Title-Card.png	Earth-17040	69
+71	Chapter 24	2019.05	https://i0.wp.com/geekade.com/wp-content/uploads/2019/07/S3-E5-Title-Card.png	Earth-17040	70
+72	Chapter 25	2019.06	https://i0.wp.com/geekade.com/wp-content/uploads/2019/08/S3-E6-Title-Card.png	Earth-17040	71
+73	Chapter 26	2019.07	https://i0.wp.com/geekade.com/wp-content/uploads/2019/08/S3-E7-Title-Card.png	Earth-17040	72
+74	Chapter 27	2019.08	https://i0.wp.com/geekade.com/wp-content/uploads/2019/08/S3-E8-Title-Card.png	Earth-17040	73,48
+75	Multiverse of Madness	2022	https://upload.wikimedia.org/wikipedia/en/1/17/Doctor_Strange_in_the_Multiverse_of_Madness_poster.jpg	Earth-199999	
+76	The Marvels	2023.7	https://upload.wikimedia.org/wikipedia/en/7/7a/The_Marvels_poster.jpg	Earth-199999	44,77
+77	Home	2023.6	./assets/images/199999/Home.webp	Earth-199999	75
+78	Hulk	2003	https://upload.wikimedia.org/wikipedia/en/5/59/Hulk_movie.jpg	Earth-400083	
+79	Iron Man	2008	https://upload.wikimedia.org/wikipedia/en/0/02/Iron_Man_%282008_film%29_poster.jpg	Earth-199999	
+80	The Incredible Hulk	2008.1	https://upload.wikimedia.org/wikipedia/en/f/f0/The_Incredible_Hulk_%28film%29_poster.jpg	Earth-199999	78,79
+81	Iron Man 2	2010		Earth-199999	80
