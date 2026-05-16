@@ -1,11 +1,11 @@
 id	title	year	image	lane	connections
-126	Into the Lion's Den	1940.1		Earth-199999	
+126	Into the Lion's Den	1940.1	./assets/images/199999/into_the_lion's_den.webp	Earth-199999	
 127	Legends and Lies	1940.2		Earth-199999	126
 128	Lost and Found	1940.3		Earth-199999	127
 129	The Last Panther	1940.4		Earth-199999	128
-82	The First Avenger	1945.0		Earth-199999	129
-86	Agent Carter	1946.0		Earth-199999	82
-87	Now is Not the End	1946.01		Earth-199999	86
+82	The First Avenger	1945.0	https://upload.wikimedia.org/wikipedia/en/3/37/Captain_America_The_First_Avenger_poster.jpg	Earth-199999	129
+86	Agent Carter	1946.0	https://upload.wikimedia.org/wikipedia/en/a/a7/Agent_Carter_%28film%29_poster.jpg	Earth-199999	82
+87	Now is Not the End	1946.01	./assets/images/199999/now_is_not_the_end.webp	Earth-199999	86
 88	Bridge and Tunnel	1946.02		Earth-199999	87
 89	Time and Tide	1946.03		Earth-199999	88
 90	The Blitzkrieg Button	1946.04		Earth-199999	89
@@ -13,7 +13,7 @@ id	title	year	image	lane	connections
 92	A Sin to Err	1946.06		Earth-199999	91
 93	SNAFU	1946.07		Earth-199999	92
 94	Valediction	1946.08		Earth-199999	93
-95	The Lady in the Lake	1947.01		Earth-199999	94
+95	The Lady in the Lake	1947.01	./assets/images/199999/the_lady_in_the_lake.webp	Earth-199999	94
 96	A View in the Dark	1947.02		Earth-199999	95
 97	Better Angels	1947.03		Earth-199999	96
 98	Smoke & Mirrors	1947.04		Earth-199999	97
@@ -28,7 +28,7 @@ id	title	year	image	lane	connections
 3	Origins: Wolverine	1979	https://upload.wikimedia.org/wikipedia/en/0/08/X-Men_Origins_Wolverine_theatrical_poster.jpg	Earth-41578	1
 4	Apocalypse	1983	https://upload.wikimedia.org/wikipedia/en/0/04/X-Men_-_Apocalypse.jpg	Earth-10005	43
 5	Dark Phoenix	1992	https://upload.wikimedia.org/wikipedia/en/9/9e/Dark_Phoenix_%28film%29.png	Earth-10005	4
-83	Captain Marvel	1995.0		Earth-199999	104
+83	Captain Marvel	1995.0	https://upload.wikimedia.org/wikipedia/en/4/4e/Captain_Marvel_%28film%29_poster.jpg	Earth-199999	104
 6	X-Men	2000	https://upload.wikimedia.org/wikipedia/en/8/81/X-MenfilmPoster.jpg	Earth-41578	3
 6.1	iconnect special	2001	./assets/images/41578/iconnect_special.webp	Earth-41578	6
 6.2	Wolverine	2003.0	./assets/images/41578/wolverine.webp	Earth-41578	6.1
@@ -38,14 +38,14 @@ id	title	year	image	lane	connections
 8	Fantastic Four	2005	https://upload.wikimedia.org/wikipedia/en/4/4a/Fantastic_Four_poster.jpg	Earth-121698	7
 9	The Last Stand	2006	https://upload.wikimedia.org/wikipedia/en/5/5b/X-Men_The_Last_Stand_theatrical_poster.jpg	Earth-41578	7
 9.1	Fight the Cure	2006.1	./assets/images/41578/fight_the_cure.webp	Earth-41578	9
-10	FF: Silver Surfer	2007	https://upload.wikimedia.org/wikipedia/en/e/e6/Fantastic_Four_2_Poster.jpg	Earth-121698	8
+10	Rise of the Silver Surfer	2007	https://upload.wikimedia.org/wikipedia/en/e/e6/Fantastic_Four_2_Poster.jpg	Earth-121698	8
 79	Iron Man	2008.0	https://upload.wikimedia.org/wikipedia/en/0/02/Iron_Man_%282008_film%29_poster.jpg	Earth-199999	83
-81	Iron Man 2	2010.0		Earth-199999	79
-105	A Funny Thing Happened on the Way to Thor's Hammer	2010.1		Earth-199999	81
-84	Thor	2011.0		Earth-199999	105
+81	Iron Man 2	2010.0	https://upload.wikimedia.org/wikipedia/en/e/ed/Iron_Man_2_poster.jpg	Earth-199999	79
+105	A Funny Thing Happened on the Way to Thor's Hammer	2010.1	./assets/images/199999/a_funny_thing_happened_on_the_way_to_Thor's_hammer.webp	Earth-199999	Earth-199999	81
+84	Thor	2011.0	https://upload.wikimedia.org/wikipedia/en/9/95/Thor_%28film%29_poster.jpg	Earth-199999	105
 80	The Incredible Hulk	2011.1	https://upload.wikimedia.org/wikipedia/en/f/f0/The_Incredible_Hulk_%28film%29_poster.jpg	Earth-199999	78,84
-106	The Consultant	2011.2		Earth-199999	80
-85	The Avengers	2012.0		Earth-199999	106
+106	The Consultant	2011.2	./assets/images/199999/the_consultant.webp	Earth-199999	80
+85	The Avengers	2012.0	https://upload.wikimedia.org/wikipedia/en/8/8a/The_Avengers_%282012_film%29_poster.jpg	Earth-199999	106
 107	Item 47	2012.1		Earth-199999	85
 108	Pilot	2013.01		Earth-199999	107
 109	0-8-4	2013.02		Earth-199999	108
@@ -54,7 +54,7 @@ id	title	year	image	lane	connections
 112	Girl in the Flower Dress	2013.05		Earth-199999	111
 113	FZZT	2013.06		Earth-199999	112
 114	The Hub	2013.07		Earth-199999	113
-115	The Dark World	2013.10		Earth-199999	114
+115	The Dark World	2013.10	https://upload.wikimedia.org/wikipedia/en/7/7f/Thor_The_Dark_World_poster.jpg	Earth-199999	114
 116	The Well	2013.11		Earth-199999	115
 117	Repairs	2013.12		Earth-199999	116
 118	The Bridge	2013.13		Earth-199999	117
@@ -115,7 +115,7 @@ id	title	year	image	lane	connections
 177	Laws of Nature	2015.61		Earth-199999	176
 178	Purpose in the Machinery	2015.62		Earth-199999	177
 179	Civil War	2016.10		Earth-199999	178
-180	Homecoming	2016.20		Earth-199999	179
+180	Homecoming	2016.20	https://upload.wikimedia.org/wikipedia/en/f/f9/Spider-Man_Homecoming_poster.jpg	Earth-199999	179,213
 181	Doctor Strange	2016.30		Earth-199999	180
 182	Vol. 2	2017.10		Earth-199999	181
 183	The Ghost	2017.20		Earth-199999	182
@@ -209,8 +209,19 @@ id	title	year	image	lane	connections
 76	The Marvels	2023.7	https://upload.wikimedia.org/wikipedia/en/7/7a/The_Marvels_poster.jpg	Earth-199999	44,77
 207	Chafa	2024.10		Earth-199999	76
 208	Seekest Thou the Road	2024.20		Earth-199999	207
-45	Deadpool & Wolverine	2024	https://upload.wikimedia.org/wikipedia/en/4/4c/Deadpool_%26_Wolverine_poster.jpg	Earth-41578	10,44,47
+45	Deadpool & Wolverine	2024	https://upload.wikimedia.org/wikipedia/en/4/4c/Deadpool_%26_Wolverine_poster.jpg	Earth-41578	10,44,47,76,216,220
 209	Brave New World	2025.10		Earth-199999	208
 210	Thunderbolts*	2025.20		Earth-199999	209
 46	The New Mutants	2025	https://upload.wikimedia.org/wikipedia/en/1/1a/TheNewMutantsPoster.jpeg	Earth-10005	5
 47	Logan	2029	https://upload.wikimedia.org/wikipedia/en/3/37/Logan_2017_poster.jpg	Earth-17315	46
+211	Spider-Man	2002	https://upload.wikimedia.org/wikipedia/en/6/6c/Spider-Man_%282002_film%29_poster.jpg	Earth-96283	
+212	Spider-Man 2	2004	https://upload.wikimedia.org/wikipedia/en/4/4e/Spider-Man_2_USA_poster.jpg	Earth-96283	211
+213	Spider-Man 3	2004	https://upload.wikimedia.org/wikipedia/en/7/7a/Spider-Man_3%2C_International_Poster.jpg	Earth-96283	212
+214	Heroes and Villains	2003	./assets/images/760207/heroes_and_villains.webp	Earth-760207	211,215
+215	Daredevil	2003	https://upload.wikimedia.org/wikipedia/en/0/04/Daredevil_poster.JPG	Earth-701306	
+216	Elektra	2005	https://upload.wikimedia.org/wikipedia/en/2/21/Elektra_teaser.jpg	Earth-701306	215
+217	Trinity	2004	https://upload.wikimedia.org/wikipedia/en/8/86/Blade_Trinity_poster.JPG	Earth-26320	219
+218	Blade	1998	https://upload.wikimedia.org/wikipedia/en/1/19/Blade_movie.jpg	Earth-26320	
+219	Blade II	2002	https://upload.wikimedia.org/wikipedia/en/6/6d/Blade_II_movie.jpg	Earth-26320	218
+219	House of Chthon	2006.1	./assets/images/26320/house_of_chthon.webp	Earth-26320	217
+220	Conclave	2006.13	./assets/images/26320/conclave.webp	Earth-26320	217
