@@ -1,49 +1,49 @@
 id	title	year	image	lane	connections
-1	First Class	1962	https://upload.wikimedia.org/wikipedia/en/5/55/X-Men_First_Class_poster.jpg	Earth-TRN414	
-3	Origins: Wolverine	1979	https://upload.wikimedia.org/wikipedia/en/c/c5/X-Men_Origins_Wolverine_theatrical_poster.jpg	Earth-10005	1
-4	Apocalypse	1983	https://upload.wikimedia.org/wikipedia/en/0/04/X-Men_Apocalypse_poster.jpg	Earth-TRN414	43
-5	Dark Phoenix	1992	https://upload.wikimedia.org/wikipedia/en/9/9e/Dark_Phoenix_poster.jpg	Earth-TRN414	4
-6	X-Men	2000	https://upload.wikimedia.org/wikipedia/en/8/81/X-menposter.jpg	Earth-10005	3
-7	X2	2003	https://upload.wikimedia.org/wikipedia/en/3/3e/X2_poster.jpg	Earth-10005	6
+1	First Class	1962	https://upload.wikimedia.org/wikipedia/en/5/55/X-Men_First_Class_poster.jpg	Earth-10005	
+3	Origins: Wolverine	1979	https://upload.wikimedia.org/wikipedia/en/c/c5/X-Men_Origins_Wolverine_theatrical_poster.jpg	Earth-41578	1
+4	Apocalypse	1983	https://upload.wikimedia.org/wikipedia/en/0/04/X-Men_Apocalypse_poster.jpg	Earth-10005	43
+5	Dark Phoenix	1992	https://upload.wikimedia.org/wikipedia/en/9/9e/Dark_Phoenix_poster.jpg	Earth-10005	4
+6	X-Men	2000	https://upload.wikimedia.org/wikipedia/en/8/81/X-menposter.jpg	Earth-41578	3
+7	X2	2003	https://upload.wikimedia.org/wikipedia/en/3/3e/X2_poster.jpg	Earth-41578	6
 8	Fantastic Four	2005	https://upload.wikimedia.org/wikipedia/en/a/a3/Fantastic_Four_poster.jpg	Earth-121698	7
-9	The Last Stand	2006	https://upload.wikimedia.org/wikipedia/en/5/50/X-Men_The_Last_Stand_poster.jpg	Earth-10005	7
+9	The Last Stand	2006	https://upload.wikimedia.org/wikipedia/en/5/50/X-Men_The_Last_Stand_poster.jpg	Earth-41578	7
 10	FF: Silver Surfer	2007	https://upload.wikimedia.org/wikipedia/en/f/f0/Rise_of_the_Silver_Surfer_poster.jpg	Earth-121698	8
-11	The Wolverine	2013	https://upload.wikimedia.org/wikipedia/en/7/74/The_Wolverine_poster_red_sun.jpg	Earth-10005	9
+11	The Wolverine	2013	https://upload.wikimedia.org/wikipedia/en/7/74/The_Wolverine_poster_red_sun.jpg	Earth-41578	9
 12	Fantastic Four (2015)	2015	https://upload.wikimedia.org/wikipedia/en/e/e1/Fantastic_Four_2015_poster.jpg	Earth-158664	43
 13	Deadpool	2016	https://upload.wikimedia.org/wikipedia/en/2/23/Deadpool_poster.jpg	Earth-41633	5
-14	The Gifted 1x01	2017.01	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-TRN634	11
-15	The Gifted 1x02	2017.02	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-TRN634	14
-16	The Gifted 1x03	2017.03	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-TRN634	15
-17	The Gifted 1x04	2017.04	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-TRN634	16
-18	The Gifted 1x05	2017.05	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-TRN634	17
-19	The Gifted 1x06	2017.06	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-TRN634	18
-20	The Gifted 1x07	2017.07	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-TRN634	19
-21	The Gifted 1x08	2017.08	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-TRN634	20
-22	The Gifted 1x09	2017.09	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-TRN634	21
-23	The Gifted 1x10	2017.10	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-TRN634	22
-24	The Gifted 1x11	2017.11	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-TRN634	23
-25	The Gifted 1x12	2017.12	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-TRN634	24
-26	The Gifted 1x13	2017.13	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-TRN634	25
-27	The Gifted 2x01	2018.01	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-TRN634	26
-28	The Gifted 2x02	2018.02	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-TRN634	27
-29	The Gifted 2x03	2018.03	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-TRN634	28
-30	The Gifted 2x04	2018.04	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-TRN634	29
-31	The Gifted 2x05	2018.05	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-TRN634	30
-32	The Gifted 2x06	2018.06	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-TRN634	31
-33	The Gifted 2x07	2018.07	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-TRN634	32
-34	The Gifted 2x08	2018.08	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-TRN634	33
-35	The Gifted 2x09	2018.09	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-TRN634	34
-36	The Gifted 2x10	2019.01	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-TRN634	35
-37	The Gifted 2x11	2019.02	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-TRN634	36
-38	The Gifted 2x12	2019.03	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-TRN634	37
-39	The Gifted 2x13	2019.04	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-TRN634	38
-40	The Gifted 2x14	2019.05	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-TRN634	39
-41	The Gifted 2x15	2019.06	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-TRN634	40
-42	The Gifted 2x16	2019.07	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-TRN634	41
-43	Days of Future Past	2023	https://upload.wikimedia.org/wikipedia/en/0/0c/X-Men_Days_of_Future_Past_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail_unscaled	Earth-10005	1,11,43
+14	The Gifted 1x01	2017.01	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-17372	11
+15	The Gifted 1x02	2017.02	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-17372	14
+16	The Gifted 1x03	2017.03	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-17372	15
+17	The Gifted 1x04	2017.04	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-17372	16
+18	The Gifted 1x05	2017.05	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-17372	17
+19	The Gifted 1x06	2017.06	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-17372	18
+20	The Gifted 1x07	2017.07	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-17372	19
+21	The Gifted 1x08	2017.08	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-17372	20
+22	The Gifted 1x09	2017.09	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-17372	21
+23	The Gifted 1x10	2017.10	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-17372	22
+24	The Gifted 1x11	2017.11	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-17372	23
+25	The Gifted 1x12	2017.12	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-17372	24
+26	The Gifted 1x13	2017.13	https://upload.wikimedia.org/wikipedia/en/a/a9/The_Gifted_poster.jpg	Earth-17372	25
+27	The Gifted 2x01	2018.01	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-17372	26
+28	The Gifted 2x02	2018.02	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-17372	27
+29	The Gifted 2x03	2018.03	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-17372	28
+30	The Gifted 2x04	2018.04	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-17372	29
+31	The Gifted 2x05	2018.05	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-17372	30
+32	The Gifted 2x06	2018.06	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-17372	31
+33	The Gifted 2x07	2018.07	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-17372	32
+34	The Gifted 2x08	2018.08	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-17372	33
+35	The Gifted 2x09	2018.09	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-17372	34
+36	The Gifted 2x10	2019.01	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-17372	35
+37	The Gifted 2x11	2019.02	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-17372	36
+38	The Gifted 2x12	2019.03	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-17372	37
+39	The Gifted 2x13	2019.04	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-17372	38
+40	The Gifted 2x14	2019.05	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-17372	39
+41	The Gifted 2x15	2019.06	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-17372	40
+42	The Gifted 2x16	2019.07	https://upload.wikimedia.org/wikipedia/en/3/3a/The_Gifted_S2_poster.jpg	Earth-17372	41
+43	Days of Future Past	2023	https://upload.wikimedia.org/wikipedia/en/0/0c/X-Men_Days_of_Future_Past_poster.jpg?utm_source=en.wikipedia.org&utm_campaign=parser&utm_content=thumbnail_unscaled	Earth-41578	1,11,43
 44	Deadpool 2	2018	https://upload.wikimedia.org/wikipedia/en/c/cf/Deadpool_2_poster.jpg	Earth-41633	13
-45	Deadpool & Wolverine	2024	https://upload.wikimedia.org/wikipedia/en/4/4c/Deadpool_%26_Wolverine_poster.jpg	Earth-10005	44,47
-46	The New Mutants	2025	https://upload.wikimedia.org/wikipedia/en/d/d5/The_New_Mutants_poster.jpg	Earth-TRN414	5
+45	Deadpool & Wolverine	2024	https://upload.wikimedia.org/wikipedia/en/4/4c/Deadpool_%26_Wolverine_poster.jpg	Earth-41578	44,47
+46	The New Mutants	2025	https://upload.wikimedia.org/wikipedia/en/d/d5/The_New_Mutants_poster.jpg	Earth-10005	5
 47	Logan	2029	https://upload.wikimedia.org/wikipedia/en/3/37/Logan_Poster.jpg	Earth-17315	46
 48	Chapter 1	2017.01	https://i.imgur.com/LLX8hNj.jpeg	Earth-TRN620	1
 49	Chapter 2	2017.02	https://i.imgur.com/nLK6bpm.jpeg	Earth-TRN620	48
@@ -53,22 +53,22 @@ id	title	year	image	lane	connections
 53	Chapter 6	2017.06	https://i.imgur.com/hVcJAc7.jpeg	Earth-TRN620	52
 54	Chapter 7	2017.07	https://i.imgur.com/xjWkqMY.jpeg	Earth-TRN620	53
 55	Chapter 8	2017.08	https://i.imgur.com/Fa6U4DZ.jpeg	Earth-TRN620	54
-56	Legion 2x01	2018.01	https://i.imgur.com/YnWxWH7.png	Earth-TRN620	55
-57	Legion 2x02	2018.02	https://i.imgur.com/h5T3t1W.png	Earth-TRN620	56
-58	Legion 2x03	2018.03	https://i.imgur.com/h5T3t1W.png	Earth-TRN620	57
-59	Legion 2x04	2018.04	https://i.imgur.com/h5T3t1W.png	Earth-TRN620	58
-60	Legion 2x05	2018.05	https://i.imgur.com/h5T3t1W.png	Earth-TRN620	59
-61	Legion 2x06	2018.06	https://i.imgur.com/h5T3t1W.png	Earth-TRN620	60
-62	Legion 2x07	2018.07	https://i.imgur.com/h5T3t1W.png	Earth-TRN620	61
-63	Legion 2x08	2018.08	https://i.imgur.com/h5T3t1W.png	Earth-TRN620	62
-64	Legion 2x09	2018.09	https://i.imgur.com/h5T3t1W.png	Earth-TRN620	63
-65	Legion 2x10	2018.10	https://i.imgur.com/h5T3t1W.png	Earth-TRN620	64
-66	Legion 2x11	2018.11	https://i.imgur.com/h5T3t1W.png	Earth-TRN620	65
-67	Legion 3x01	2019.01	https://i.imgur.com/vHqQWqR.png	Earth-TRN620	66
-68	Legion 3x02	2019.02	https://i.imgur.com/vHqQWqR.png	Earth-TRN620	67
-69	Legion 3x03	2019.03	https://i.imgur.com/vHqQWqR.png	Earth-TRN620	68
-70	Legion 3x04	2019.04	https://i.imgur.com/vHqQWqR.png	Earth-TRN620	69
-71	Legion 3x05	2019.05	https://i.imgur.com/vHqQWqR.png	Earth-TRN620	70
-72	Legion 3x06	2019.06	https://i.imgur.com/vHqQWqR.png	Earth-TRN620	71
-73	Legion 3x07	2019.07	https://i.imgur.com/vHqQWqR.png	Earth-TRN620	72
-74	Legion 3x08	2019.08	https://i.imgur.com/vHqQWqR.png	Earth-TRN620	73,48
+56	Chapter 9	2018.01	https://i.imgur.com/YnWxWH7.png	Earth-TRN620	55
+57	Chapter 10	2018.02	https://i.imgur.com/RBtalHo.png	Earth-TRN620	56
+58	Chapter 11	2018.03	https://i.imgur.com/VZKbJk0.png	Earth-TRN620	57
+59	Chapter 12	2018.04	https://i.imgur.com/pFwohU2.png	Earth-TRN620	58
+60	Chapter 13	2018.05	https://i.imgur.com/zOzfoPh.png	Earth-TRN620	59
+61	Chatper 14	2018.06	https://i.imgur.com/SGqNBWJ.png	Earth-TRN620	60
+62	Chatper 15	2018.07	https://i.imgur.com/JvEhZ6b.png	Earth-TRN620	61
+63	Chapter 16	2018.08	https://i.imgur.com/kLlchDg.png	Earth-TRN620	62
+64	Chapter 17	2018.09	https://i.imgur.com/1sNSN4h.png	Earth-TRN620	63
+65	Chapter 18	2018.10	https://i.imgur.com/e6pEqDW.png	Earth-TRN620	64
+66	Chapter 19	2018.11	https://i.imgur.com/SXAI3K2.png	Earth-TRN620	65
+67	Chapter 20	2019.01	https://i0.wp.com/geekade.com/wp-content/uploads/2019/07/S3-E1-Title-Card.png	Earth-TRN620	66
+68	Chapter 21	2019.02	https://i0.wp.com/geekade.com/wp-content/uploads/2019/07/S3-E2-Title-Card.png	Earth-TRN620	67
+69	Chapter 22	2019.03	https://i0.wp.com/geekade.com/wp-content/uploads/2019/07/S3-E3-Title-Card.png	Earth-TRN620	68
+70	Chapter 23	2019.04	https://i0.wp.com/geekade.com/wp-content/uploads/2019/07/S3-E4-Title-Card.png	Earth-TRN620	69
+71	Chapter 24	2019.05	https://i0.wp.com/geekade.com/wp-content/uploads/2019/07/S3-E5-Title-Card.png	Earth-TRN620	70
+72	Chapter 25	2019.06	https://i0.wp.com/geekade.com/wp-content/uploads/2019/08/S3-E6-Title-Card.png	Earth-TRN620	71
+73	Chapter 26	2019.07	https://i0.wp.com/geekade.com/wp-content/uploads/2019/08/S3-E7-Title-Card.png	Earth-TRN620	72
+74	Chapter 27	2019.08	https://i0.wp.com/geekade.com/wp-content/uploads/2019/08/S3-E8-Title-Card.png	Earth-TRN620	73,48
